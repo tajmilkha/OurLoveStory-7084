@@ -11,21 +11,21 @@ interface TimelineMilestone {
 
 const timelineMilestones: TimelineMilestone[] = [
   {
-    date: "Mid-October 2025",
+    date: "Early November 2025",
     title: "First Match",
     description: "A random Roblox lobby brought Alpha and PRi together. We were just two players in a game, but something about that match felt different. That one game changed everything.",
     icon: "🎮",
   },
   {
-    date: "Late October 2025",
+    date: "Mid-November 2025",
     title: "Started Hanging Out",
-    description: "What started as random matches became intentional. Four weeks of late-night gaming sessions, getting to know each other, and falling for someone we'd never even seen. Every game was a date.",
+    description: "What started as random matches became intentional. Weeks of late-night gaming sessions, getting to know each other, and falling for someone we'd never even seen. Every game was a date.",
     icon: "🌙",
   },
   {
     date: "November 23, 2025",
     title: "Became Official",
-    description: "After six beautiful weeks of talking, laughing, and falling hard, Alpha asked PRi to be official. She said yes without hesitation. Our love story officially began.",
+    description: "After weeks of talking, laughing, and falling hard, Alpha asked PRi to be official. She said yes without hesitation. Our love story officially began.",
     icon: "💝",
   },
   {
