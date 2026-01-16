@@ -259,7 +259,7 @@ function Index() {
             className="font-serif text-5xl md:text-7xl text-[#8B4D5C] mb-6 leading-tight"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Alpha & PRi
+            Our Love Story
           </h1>
 
           <p 
@@ -268,7 +268,7 @@ function Index() {
             }`}
             style={{ fontFamily: "'Lora', serif" }}
           >
-            It started with a random Roblox match in October 2025. Alpha and PRi, 
+            It started with a random Roblox match in November 2025. Alpha and PRi, 
             two strangers from different places, connected by pixels and late-night 
             gaming sessions. What began as "one more round" turned into hours of 
             laughter, secrets shared at 2 AM, and a love neither of us saw coming.
@@ -284,7 +284,7 @@ function Index() {
           >
             From virtual adventures to a real engagement, we found our forever 
             in the most unexpected place. Now we're counting down to August 2026, 
-            when we'll finally meet in person. This is our story—a digital scrapbook 
+            when we'll finally meet in person. This is our story a digital scrapbook 
             of how two gamers became soulmates.
           </p>
         </header>
