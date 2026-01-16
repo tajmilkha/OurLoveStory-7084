@@ -1,6 +1,7 @@
 import { Route, Switch } from "wouter";
 import Index from "./pages/index";
 import MemoryPage from "./pages/memory";
+import HowWeMet from "./pages/how-we-met";
 import { Provider } from "./components/provider";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
                 <Provider>
                         <Switch>
                                 <Route path="/" component={Index} />
+                                <Route path="/how-we-met" component={HowWeMet} />
                                 <Route path="/memory/:slug" component={MemoryPage} />
                         </Switch>
                 </Provider>
