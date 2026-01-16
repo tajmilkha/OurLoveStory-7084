@@ -43,17 +43,16 @@ const timelineMilestones: TimelineMilestone[] = [
 interface GalleryImage {
   id: number;
   caption: string;
-  color: string;
-  icon: string;
+  src: string;
 }
 
 const galleryImages: GalleryImage[] = [
-  { id: 1, caption: "Where we first met 💕", color: "from-rose-200 to-amber-100", icon: "🏠" },
-  { id: 2, caption: "Our matching avatars", color: "from-violet-200 to-rose-100", icon: "👫" },
-  { id: 3, caption: "Building together", color: "from-amber-100 to-rose-200", icon: "🏗️" },
-  { id: 4, caption: "Late night adventures", color: "from-indigo-200 to-violet-100", icon: "🌙" },
-  { id: 5, caption: "Our favorite spot", color: "from-rose-100 to-pink-200", icon: "✨" },
-  { id: 6, caption: "Celebrating together", color: "from-amber-200 to-orange-100", icon: "🎉" },
+  { id: 1, caption: "Our first adventure together 💕", src: "./roblox1.jpeg" },
+  { id: 2, caption: "Making memories in our world 🌟", src: "./roblox2.jpeg" },
+  { id: 3, caption: "Side by side, always 💫", src: "./roblox3.jpeg" },
+  { id: 4, caption: "Late night exploring 🌙", src: "./roblox4.jpeg" },
+  { id: 5, caption: "Our happy place ✨", src: "./roblox5.jpeg" },
+  { id: 6, caption: "Every moment with you is magic 💝", src: "./roblox6.jpeg" },
 ];
 
 const GalleryCard = ({ image, index, isVisible }: { image: GalleryImage; index: number; isVisible: boolean }) => (
@@ -63,23 +62,20 @@ const GalleryCard = ({ image, index, isVisible }: { image: GalleryImage; index: 
     }`}
     style={{ transitionDelay: `${index * 100}ms` }}
   >
-    {/* Placeholder gradient background */}
-    <div className={`absolute inset-0 bg-gradient-to-br ${image.color}`} />
-    
-    {/* Icon placeholder */}
-    <div className="absolute inset-0 flex items-center justify-center">
-      <span className="text-5xl opacity-40 group-hover:scale-125 group-hover:opacity-60 transition-all duration-500">
-        {image.icon}
-      </span>
-    </div>
+    {/* Actual image */}
+    <img 
+      src={image.src} 
+      alt={image.caption}
+      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
     
     {/* Hover overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/80 via-[#8B4D5C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
     
     {/* Caption */}
     <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
       <p 
-        className="text-white text-sm font-medium text-center"
+        className="text-white text-sm font-medium text-center drop-shadow-lg"
         style={{ fontFamily: "'Lora', serif" }}
       >
         {image.caption}
