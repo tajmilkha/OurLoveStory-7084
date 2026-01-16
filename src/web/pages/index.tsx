@@ -9,34 +9,40 @@ interface TimelineMilestone {
 
 const timelineMilestones: TimelineMilestone[] = [
   {
-    date: "June 2022",
+    date: "Mid-November 2025",
     title: "First Match",
-    description: "A random game lobby brought us together. We were on the same team, and something just clicked. You made me laugh so hard I almost lost us the match.",
+    description: "A random Roblox lobby brought Alpha and PRi together. We were just two players in a game, but something about that match felt different. We couldn't stop talking.",
     icon: "🎮",
   },
   {
-    date: "July 2022",
-    title: "First Voice Call",
-    description: "We finally heard each other's voices. That nervous 'hello' turned into 4 hours of talking about everything and nothing. I didn't want to hang up.",
-    icon: "📞",
-  },
-  {
-    date: "September 2022",
-    title: "Became Official",
-    description: "You asked me in the most adorable way—in our favorite game spot, with virtual flowers. I said yes before you even finished asking.",
+    date: "November 23, 2025",
+    title: "Started Dating",
+    description: "It didn't take long to realize this was something special. Alpha asked PRi to be official, and she said yes without hesitation. Our love story officially began.",
     icon: "💝",
   },
   {
-    date: "January 2023",
-    title: "First IRL Meeting",
-    description: "The airport arrival hall. My heart was racing. When I finally saw you, everything felt so real. That hug felt like coming home.",
-    icon: "✈️",
+    date: "Around November 30, 2025",
+    title: "First Voice Call",
+    description: "About a week after becoming official, we finally heard each other's voices. That nervous 'hello' turned into hours of laughter and late-night conversations we never wanted to end.",
+    icon: "📞",
   },
   {
-    date: "Ongoing",
-    title: "Our Adventures",
-    description: "Every day with you is a new adventure. Late-night gaming sessions, surprise virtual dates, planning our future together. The best is yet to come.",
-    icon: "💫",
+    date: "December 2025",
+    title: "Epic 2v16 Game War",
+    description: "Us against the world—literally. Our legendary battle where we took on 16 players together and proved we're the ultimate duo. Gaming power couple energy!",
+    icon: "⚔️",
+  },
+  {
+    date: "January 9, 2026",
+    title: "Got Engaged",
+    description: "Alpha asked PRi to spend forever together, and she said yes! From pixels to promises, our virtual love story became a real-life commitment. Forever starts now.",
+    icon: "💍",
+  },
+  {
+    date: "August 2026",
+    title: "First IRL Meeting",
+    description: "The moment we've been waiting for. After months of video calls and virtual dates, we'll finally hold each other for real. Our countdown has begun.",
+    icon: "✈️",
   },
 ];
 
@@ -252,7 +258,7 @@ function Index() {
             className="font-serif text-5xl md:text-7xl text-[#8B4D5C] mb-6 leading-tight"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Our Love Story
+            Alpha & PRi
           </h1>
 
           <p 
@@ -261,10 +267,10 @@ function Index() {
             }`}
             style={{ fontFamily: "'Lora', serif" }}
           >
-            It started with a random match in a game lobby. Two strangers, 
-            miles apart, connected by pixels and late-night voice chats. 
-            What began as "one more round" turned into hours of laughter, 
-            secrets shared at 2 AM, and a feeling neither of us expected.
+            It started with a random Roblox match in November 2025. Alpha and PRi, 
+            two strangers from different places, connected by pixels and late-night 
+            gaming sessions. What began as "one more round" turned into hours of 
+            laughter, secrets shared at 2 AM, and a love neither of us saw coming.
           </p>
 
           <HeartDivider />
@@ -275,10 +281,10 @@ function Index() {
             }`}
             style={{ fontFamily: "'Lora', serif" }}
           >
-            From virtual adventures to real-life butterflies, we found something 
-            rare in the most unexpected place. This is our story—a digital 
-            scrapbook of the moments, memories, and little things that made 
-            us fall for each other.
+            From virtual adventures to a real engagement, we found our forever 
+            in the most unexpected place. Now we're counting down to August 2026, 
+            when we'll finally meet in person. This is our story—a digital scrapbook 
+            of how two gamers became soulmates.
           </p>
         </header>
 
