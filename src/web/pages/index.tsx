@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "wouter";
+import { memories, Memory } from "../data/memories";
 
 interface TimelineMilestone {
   date: string;
@@ -9,15 +11,21 @@ interface TimelineMilestone {
 
 const timelineMilestones: TimelineMilestone[] = [
   {
-    date: "Mid-November 2025",
+    date: "Mid-October 2025",
     title: "First Match",
-    description: "A random Roblox lobby brought Alpha and PRi together. We were just two players in a game, but something about that match felt different. We couldn't stop talking.",
+    description: "A random Roblox lobby brought Alpha and PRi together. We were just two players in a game, but something about that match felt different. That one game changed everything.",
     icon: "🎮",
   },
   {
+    date: "Late October 2025",
+    title: "Started Hanging Out",
+    description: "What started as random matches became intentional. Four weeks of late-night gaming sessions, getting to know each other, and falling for someone we'd never even seen. Every game was a date.",
+    icon: "🌙",
+  },
+  {
     date: "November 23, 2025",
-    title: "Started Dating",
-    description: "It didn't take long to realize this was something special. Alpha asked PRi to be official, and she said yes without hesitation. Our love story officially began.",
+    title: "Became Official",
+    description: "After six beautiful weeks of talking, laughing, and falling hard, Alpha asked PRi to be official. She said yes without hesitation. Our love story officially began.",
     icon: "💝",
   },
   {
@@ -46,56 +54,49 @@ const timelineMilestones: TimelineMilestone[] = [
   },
 ];
 
-interface GalleryImage {
-  id: number;
-  caption: string;
-  src: string;
-}
-
-const galleryImages: GalleryImage[] = [
-  { id: 1, caption: "Our first adventure together 💕", src: "./roblox1.jpeg" },
-  { id: 2, caption: "Making memories in our world 🌟", src: "./roblox2.jpeg" },
-  { id: 3, caption: "Side by side, always 💫", src: "./roblox3.jpeg" },
-  { id: 4, caption: "Late night exploring 🌙", src: "./roblox4.jpeg" },
-  { id: 5, caption: "Our happy place ✨", src: "./roblox5.jpeg" },
-  { id: 6, caption: "Every moment with you is magic 💝", src: "./roblox6.jpeg" },
-];
-
-const GalleryCard = ({ image, index, isVisible }: { image: GalleryImage; index: number; isVisible: boolean }) => (
-  <div 
-    className={`group relative overflow-hidden rounded-2xl aspect-square transition-all duration-700 ease-out ${
-      isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
-    }`}
-    style={{ transitionDelay: `${index * 100}ms` }}
-  >
-    {/* Actual image */}
-    <img 
-      src={image.src} 
-      alt={image.caption}
-      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-    />
-    
-    {/* Hover overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/80 via-[#8B4D5C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
-    
-    {/* Caption */}
-    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-      <p 
-        className="text-white text-sm font-medium text-center drop-shadow-lg"
-        style={{ fontFamily: "'Lora', serif" }}
-      >
-        {image.caption}
-      </p>
-    </div>
-    
-    {/* Corner heart decoration */}
-    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <span className="text-white text-lg drop-shadow-lg">♥</span>
-    </div>
-    
-    {/* Subtle border */}
-    <div className="absolute inset-0 rounded-2xl border border-white/30 group-hover:border-white/50 transition-colors duration-300" />
-  </div>
+const GalleryCard = ({ memory, index, isVisible }: { memory: Memory; index: number; isVisible: boolean }) => (
+  <Link href={`/memory/${memory.slug}`}>
+    <a
+      className={`group relative overflow-hidden rounded-2xl aspect-square transition-all duration-700 ease-out block cursor-pointer ${
+        isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+      }`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      {/* Actual image */}
+      <img 
+        src={memory.src} 
+        alt={memory.caption}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      
+      {/* Hover overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/80 via-[#8B4D5C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+      
+      {/* Caption and CTA */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+        <p 
+          className="text-white text-sm font-medium text-center drop-shadow-lg mb-2"
+          style={{ fontFamily: "'Lora', serif" }}
+        >
+          {memory.caption}
+        </p>
+        <p 
+          className="text-white/80 text-xs text-center"
+          style={{ fontFamily: "'Lora', serif" }}
+        >
+          Click to read our story →
+        </p>
+      </div>
+      
+      {/* Corner heart decoration */}
+      <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span className="text-white text-lg drop-shadow-lg">♥</span>
+      </div>
+      
+      {/* Subtle border */}
+      <div className="absolute inset-0 rounded-2xl border border-white/30 group-hover:border-white/50 transition-colors duration-300" />
+    </a>
+  </Link>
 );
 
 const TimelineItem = ({ milestone, index, isVisible }: { milestone: TimelineMilestone; index: number; isVisible: boolean }) => {
@@ -267,7 +268,7 @@ function Index() {
             }`}
             style={{ fontFamily: "'Lora', serif" }}
           >
-            It started with a random Roblox match in November 2025. Alpha and PRi, 
+            It started with a random Roblox match in October 2025. Alpha and PRi, 
             two strangers from different places, connected by pixels and late-night 
             gaming sessions. What began as "one more round" turned into hours of 
             laughter, secrets shared at 2 AM, and a love neither of us saw coming.
@@ -403,10 +404,10 @@ function Index() {
         {/* Gallery grid */}
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {galleryImages.map((image, index) => (
+            {memories.map((memory, index) => (
               <GalleryCard 
-                key={image.id} 
-                image={image} 
+                key={memory.id} 
+                memory={memory} 
                 index={index} 
                 isVisible={galleryVisible} 
               />
