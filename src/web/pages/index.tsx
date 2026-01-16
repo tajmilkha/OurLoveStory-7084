@@ -1,4 +1,154 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+
+interface TimelineMilestone {
+  date: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const timelineMilestones: TimelineMilestone[] = [
+  {
+    date: "June 2022",
+    title: "First Match",
+    description: "A random game lobby brought us together. We were on the same team, and something just clicked. You made me laugh so hard I almost lost us the match.",
+    icon: "🎮",
+  },
+  {
+    date: "July 2022",
+    title: "First Voice Call",
+    description: "We finally heard each other's voices. That nervous 'hello' turned into 4 hours of talking about everything and nothing. I didn't want to hang up.",
+    icon: "📞",
+  },
+  {
+    date: "September 2022",
+    title: "Became Official",
+    description: "You asked me in the most adorable way—in our favorite game spot, with virtual flowers. I said yes before you even finished asking.",
+    icon: "💝",
+  },
+  {
+    date: "January 2023",
+    title: "First IRL Meeting",
+    description: "The airport arrival hall. My heart was racing. When I finally saw you, everything felt so real. That hug felt like coming home.",
+    icon: "✈️",
+  },
+  {
+    date: "Ongoing",
+    title: "Our Adventures",
+    description: "Every day with you is a new adventure. Late-night gaming sessions, surprise virtual dates, planning our future together. The best is yet to come.",
+    icon: "💫",
+  },
+];
+
+interface GalleryImage {
+  id: number;
+  caption: string;
+  color: string;
+  icon: string;
+}
+
+const galleryImages: GalleryImage[] = [
+  { id: 1, caption: "Where we first met 💕", color: "from-rose-200 to-amber-100", icon: "🏠" },
+  { id: 2, caption: "Our matching avatars", color: "from-violet-200 to-rose-100", icon: "👫" },
+  { id: 3, caption: "Building together", color: "from-amber-100 to-rose-200", icon: "🏗️" },
+  { id: 4, caption: "Late night adventures", color: "from-indigo-200 to-violet-100", icon: "🌙" },
+  { id: 5, caption: "Our favorite spot", color: "from-rose-100 to-pink-200", icon: "✨" },
+  { id: 6, caption: "Celebrating together", color: "from-amber-200 to-orange-100", icon: "🎉" },
+];
+
+const GalleryCard = ({ image, index, isVisible }: { image: GalleryImage; index: number; isVisible: boolean }) => (
+  <div 
+    className={`group relative overflow-hidden rounded-2xl aspect-square transition-all duration-700 ease-out ${
+      isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+    }`}
+    style={{ transitionDelay: `${index * 100}ms` }}
+  >
+    {/* Placeholder gradient background */}
+    <div className={`absolute inset-0 bg-gradient-to-br ${image.color}`} />
+    
+    {/* Icon placeholder */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <span className="text-5xl opacity-40 group-hover:scale-125 group-hover:opacity-60 transition-all duration-500">
+        {image.icon}
+      </span>
+    </div>
+    
+    {/* Hover overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+    
+    {/* Caption */}
+    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+      <p 
+        className="text-white text-sm font-medium text-center"
+        style={{ fontFamily: "'Lora', serif" }}
+      >
+        {image.caption}
+      </p>
+    </div>
+    
+    {/* Corner heart decoration */}
+    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span className="text-white text-lg drop-shadow-lg">♥</span>
+    </div>
+    
+    {/* Subtle border */}
+    <div className="absolute inset-0 rounded-2xl border border-white/30 group-hover:border-white/50 transition-colors duration-300" />
+  </div>
+);
+
+const TimelineItem = ({ milestone, index, isVisible }: { milestone: TimelineMilestone; index: number; isVisible: boolean }) => {
+  const isEven = index % 2 === 0;
+  
+  return (
+    <div className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:gap-8 gap-4`}>
+      {/* Content card */}
+      <div 
+        className={`md:w-5/12 w-full transition-all duration-700 ease-out ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-8'
+        }`}
+        style={{ transitionDelay: `${index * 150}ms` }}
+      >
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg shadow-rose-100/50 border border-rose-100/50 hover:shadow-xl hover:shadow-rose-200/40 transition-all duration-300 hover:-translate-y-1 group">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{milestone.icon}</span>
+            <span className="text-sm text-rose-400 font-medium tracking-wide" style={{ fontFamily: "'Lora', serif" }}>
+              {milestone.date}
+            </span>
+          </div>
+          <h3 
+            className="text-xl text-[#8B4D5C] mb-2 font-semibold"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            {milestone.title}
+          </h3>
+          <p 
+            className="text-[#9C7B7B] leading-relaxed text-sm"
+            style={{ fontFamily: "'Lora', serif" }}
+          >
+            {milestone.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Center timeline marker */}
+      <div className="md:w-2/12 flex justify-center relative">
+        <div 
+          className={`w-5 h-5 rounded-full bg-gradient-to-br from-rose-400 to-rose-500 border-4 border-white shadow-lg z-10 transition-all duration-500 ${
+            isVisible ? 'scale-100' : 'scale-0'
+          }`}
+          style={{ transitionDelay: `${index * 150 + 100}ms` }}
+        >
+          <div className="absolute inset-0 rounded-full bg-rose-400 animate-ping opacity-20" />
+        </div>
+      </div>
+
+      {/* Empty space for alternating layout */}
+      <div className="md:w-5/12 hidden md:block" />
+    </div>
+  );
+};
 
 const FloatingHeart = ({ delay, left, size, duration }: { delay: number; left: string; size: number; duration: number }) => (
   <div
@@ -25,9 +175,40 @@ const HeartDivider = () => (
 
 function Index() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [timelineVisible, setTimelineVisible] = useState(false);
+  const [galleryVisible, setGalleryVisible] = useState(false);
+  const timelineRef = useRef<HTMLElement>(null);
+  const galleryRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === timelineRef.current) {
+              setTimelineVisible(true);
+            }
+            if (entry.target === galleryRef.current) {
+              setGalleryVisible(true);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (timelineRef.current) {
+      observer.observe(timelineRef.current);
+    }
+    if (galleryRef.current) {
+      observer.observe(galleryRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const hearts = [
@@ -138,6 +319,128 @@ function Index() {
           </p>
         </div>
       </div>
+
+      {/* Our Story Timeline Section */}
+      <section 
+        id="story"
+        ref={timelineRef}
+        className="relative z-10 py-24 px-6"
+      >
+        {/* Section header */}
+        <div className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-1000 ${
+          timelineVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}>
+          <h2 
+            className="text-4xl md:text-5xl text-[#8B4D5C] mb-4"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Our Story
+          </h2>
+          <p 
+            className="text-[#9C7B7B] text-lg"
+            style={{ fontFamily: "'Lora', serif" }}
+          >
+            The chapters of how we fell in love
+          </p>
+          <HeartDivider />
+        </div>
+
+        {/* Timeline */}
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-rose-200 via-rose-300 to-rose-200 transform -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-rose-200 via-rose-300 to-rose-200 md:hidden" />
+
+          {/* Timeline items */}
+          <div className="space-y-12 md:space-y-16">
+            {timelineMilestones.map((milestone, index) => (
+              <TimelineItem 
+                key={index} 
+                milestone={milestone} 
+                index={index} 
+                isVisible={timelineVisible} 
+              />
+            ))}
+          </div>
+
+          {/* End heart */}
+          <div className={`flex justify-center mt-16 transition-all duration-700 ${
+            timelineVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
+          }`} style={{ transitionDelay: "900ms" }}>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center shadow-lg shadow-rose-300/40">
+              <span className="text-white text-xl">♥</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section
+        ref={galleryRef}
+        className="relative z-10 py-24 px-6 bg-gradient-to-b from-transparent via-rose-50/30 to-transparent"
+      >
+        {/* Section header */}
+        <div className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-1000 ${
+          galleryVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}>
+          <h2 
+            className="text-4xl md:text-5xl text-[#8B4D5C] mb-4"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Pixelated Memories
+          </h2>
+          <p 
+            className="text-[#9C7B7B] text-lg"
+            style={{ fontFamily: "'Lora', serif" }}
+          >
+            Screenshots from our gaming adventures together
+          </p>
+          <HeartDivider />
+        </div>
+
+        {/* Gallery grid */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {galleryImages.map((image, index) => (
+              <GalleryCard 
+                key={image.id} 
+                image={image} 
+                index={index} 
+                isVisible={galleryVisible} 
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom decoration */}
+        <div className={`flex justify-center mt-16 transition-all duration-700 ${
+          galleryVisible ? "opacity-100" : "opacity-0"
+        }`} style={{ transitionDelay: "800ms" }}>
+          <p 
+            className="text-[#C4A5A5] italic text-center"
+            style={{ fontFamily: "'Lora', serif" }}
+          >
+            More memories to come... 💕
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="relative z-10 py-12 px-6 text-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex gap-2">
+            <span className="text-rose-300 text-lg">♥</span>
+            <span className="text-amber-300 text-lg">♥</span>
+            <span className="text-rose-300 text-lg">♥</span>
+          </div>
+          <p 
+            className="text-[#9C7B7B] text-sm"
+            style={{ fontFamily: "'Lora', serif" }}
+          >
+            Made with love, for the one I love
+          </p>
+        </div>
+      </footer>
 
       {/* Soft vignette effect */}
       <div className="fixed inset-0 pointer-events-none bg-gradient-to-t from-rose-100/20 via-transparent to-amber-50/20" />
