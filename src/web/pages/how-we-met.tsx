@@ -95,7 +95,7 @@ export default function HowWeMet() {
               className="text-lg text-[#C4A5A5] italic"
               style={{ fontFamily: "'Lora', serif" }}
             >
-              November 2025 — The match that changed everything
+              March to November 2025 — From emptiness to finding her
             </p>
           </header>
 
@@ -107,100 +107,231 @@ export default function HowWeMet() {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            {/* Opening */}
-            <section className="mb-10">
+            {/* The Beginning */}
+            <section className="mb-12">
               <h2 
-                className="text-2xl text-[#8B4D5C] mb-4"
+                className="text-2xl text-[#8B4D5C] mb-6"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                A Random Lobby, A Perfect Match
+                Before Her
               </h2>
               <p 
-                className="text-[#9C7B7B] leading-relaxed text-lg mb-4"
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                It was an ordinary November night in 2025. Alpha logged into Roblox like any other 
-                day—just looking for a fun game to pass the time. No expectations, no idea that 
-                everything was about to change.
+                Back in <span className="text-[#8B4D5C] font-medium">March 2025</span>, I was empty. Bored. Just going through 
+                life without really feeling anything. One night, scrolling through Roblox with nothing better 
+                to do, I stumbled onto a game called <span className="italic">2 Player Hugs RP</span>.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                I didn't think much of it at first. But something about the competitive side of the game 
+                pulled me in. There was this group—the <span className="font-medium">BR Team</span>—dominating everyone, 
+                picking fights, making the game hell for regular players. And I decided I was going to stop them.
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                PRi was there too, in the same random lobby. Two players out of thousands, 
-                somehow placed in the same match. Call it luck, fate, or just good 
-                matchmaking—but that one game was the beginning of everything.
+                So I fought. And I kept fighting. I found a crew, we trained together, we pushed back. 
+                For a while, it felt like I had something—a purpose, friends who had my back.
               </p>
             </section>
 
-            {/* The connection */}
-            <section className="mb-10">
+            {/* The Betrayal */}
+            <section className="mb-12">
               <h2 
-                className="text-2xl text-[#8B4D5C] mb-4"
+                className="text-2xl text-[#8B4D5C] mb-6"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                Something Felt Different
+                The Betrayal
               </h2>
               <p 
-                className="text-[#9C7B7B] leading-relaxed text-lg mb-4"
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                We started talking during the game. At first, it was just the usual gaming 
-                banter—strategy calls, laughing at mistakes, celebrating wins together. 
-                But something clicked. The conversation flowed so naturally, like we'd known 
-                each other forever.
+                Then they turned on me.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                The people I trusted, the ones I fought alongside—they betrayed me. Left me behind. 
+                Sided with the very players we were supposed to be fighting against. I was alone again, 
+                but this time it hit different. <span className="italic">Harder.</span>
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                "One more round" became three, then five, then we lost count. Hours passed 
-                without us noticing. By the end of that night, we knew this wasn't just 
-                a random friendship. It was something special.
+                Instead of quitting, I got angry. I trained by myself. Alone in servers, grinding, 
+                getting stronger. If everyone was going to abandon me, then I'd become someone who 
+                <span className="font-medium"> didn't need anyone</span>. I became the strongest fighter in the game. 
+                People knew my name. They feared me. But I was still empty inside.
               </p>
             </section>
 
-            {/* Your story section - editable placeholder */}
-            <section className="mb-10 border-l-4 border-rose-300/50 pl-6">
+            {/* Her */}
+            <section className="mb-12 border-l-4 border-rose-300/50 pl-6">
               <h2 
-                className="text-2xl text-[#8B4D5C] mb-4"
+                className="text-2xl text-[#8B4D5C] mb-6"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                Our First Impressions
+                Then I Saw Her
               </h2>
               <p 
-                className="text-[#9C7B7B] leading-relaxed text-lg mb-4 italic"
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                [Alpha & PRi—this is your space to write about your first impressions of each other. 
-                What did you notice? What made you want to keep playing together? 
-                What was running through your mind that first night?]
+                <span className="text-[#8B4D5C] font-medium">November 2025.</span> I noticed someone new in the game. 
+                Not new to the game itself—she'd been around—but new to <em>me</em>. 
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                <span className="font-medium">PRi.</span>
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                There was something different about her. While everyone else was chaotic, loud, 
+                always trying to prove something—she was <span className="italic">calm</span>. 
+                Quiet. She moved through the server with this graceful energy that made me stop 
+                and actually look.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                And then I noticed the crown. This little <span className="text-[#8B4D5C] font-medium">8-bit crown</span> sitting 
+                on her avatar. Something about it just... caught me. It was simple, but elegant. 
+                Like her whole aesthetic—this beautiful outfit, put together with actual thought and care. 
+                She stood out without even trying.
               </p>
             </section>
 
-            {/* The beginning */}
+            {/* The Featured Image */}
+            <div 
+              className={`my-12 transition-all duration-1000 delay-500 ${
+                isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-rose-200/40 border-4 border-white">
+                <img 
+                  src="./pri-crown.png" 
+                  alt="PRi's character with her signature 8-bit crown"
+                  className="w-full h-auto"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                  <p 
+                    className="text-white/90 text-sm text-center italic"
+                    style={{ fontFamily: "'Lora', serif" }}
+                  >
+                    The 8-bit crown that caught my eye — PRi with her elegant style
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Watching from afar */}
+            <section className="mb-12">
+              <h2 
+                className="text-2xl text-[#8B4D5C] mb-6"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Four Weeks of Watching
+              </h2>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                For <span className="font-medium">four weeks</span>, I didn't say a word to her. I just... watched. 
+                Not in a weird way—I just noticed her. Every time she was in a server, I'd see her. 
+                I'd notice the way she played, the way she carried herself. She never got involved 
+                in the drama. She was just <em>there</em>, doing her own thing, being peaceful.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                Meanwhile, I was still the fighter everyone knew. Still strong. Still respected. 
+                Still feared. She had no idea about any of that. To her, I was probably just 
+                another player in the server.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                But that crown kept pulling my attention back to her. Every single time.
+              </p>
+            </section>
+
+            {/* Finally Speaking */}
+            <section className="mb-12 border-l-4 border-rose-300/50 pl-6">
+              <h2 
+                className="text-2xl text-[#8B4D5C] mb-6"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Finally, I Spoke
+              </h2>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                I don't even remember exactly what I said. Something about the crown. I just 
+                asked about it—where she got it, why she wore it. Something simple. Something safe.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                And she answered. We talked. It was easy. Natural. No pressure, no agenda. 
+                Just two people having a conversation in a game.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                She didn't know I was the strongest player in the game. She didn't know my 
+                reputation, my history, any of it. And honestly? <span className="italic">That's what made it special.</span> 
+                She liked me for <em>me</em>—not for who I was in the fighting community, not for 
+                what I could do. Just me.
+              </p>
+            </section>
+
+            {/* The ending */}
             <section>
               <h2 
-                className="text-2xl text-[#8B4D5C] mb-4"
+                className="text-2xl text-[#8B4D5C] mb-6"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                And So It Began...
+                And Everything Changed
               </h2>
               <p 
-                className="text-[#9C7B7B] leading-relaxed text-lg mb-4"
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                After that first match, we kept coming back. Every night, same time, same 
-                place—meeting in the virtual world that brought us together. What started 
-                as gaming partners quickly became something more.
+                We became friends naturally. No big dramatic moment—just conversations that got longer, 
+                nights that got later, jokes that became inside references. She filled a space I 
+                didn't even know was empty.
               </p>
               <p 
-                className="text-[#9C7B7B] leading-relaxed text-lg"
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                Looking back now, from our engagement to planning our first real-life meeting, 
-                it's incredible to think it all started with one random Roblox match. 
-                A game brought us together, but love made us stay.
+                From <span className="font-medium">March</span>, when I was nothing but anger and loneliness, 
+                to <span className="font-medium">November</span>, when I finally found someone who saw the real me—it 
+                was a journey I never expected to take.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg text-center font-medium"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                All because of an 8-bit crown and the beautiful girl wearing it.
               </p>
             </section>
           </div>
