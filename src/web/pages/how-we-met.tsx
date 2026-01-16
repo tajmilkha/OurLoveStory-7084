@@ -128,15 +128,15 @@ export default function HowWeMet() {
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 I didn't think much of it at first. But something about the competitive side of the game 
-                pulled me in. There was this group—the <span className="font-medium">BR Team</span>—dominating everyone, 
-                picking fights, making the game hell for regular players. And I decided I was going to stop them.
+                pulled me in. There was this group the <span className="font-medium">BR Team</span> dominating everyone, 
+                picking fights, making the game hell for regular players And I decided I was going to stop them.
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg"
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 So I fought. And I kept fighting. I found a crew, we trained together, we pushed back. 
-                For a while, it felt like I had something—a purpose, friends who had my back.
+                For a while, it felt like I had something a purpose, friends who had my back.
               </p>
             </section>
 
@@ -158,7 +158,7 @@ export default function HowWeMet() {
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                The people I trusted, the ones I fought alongside—they betrayed me. Left me behind. 
+                The people I trusted, the ones I fought alongside they betrayed me. Left me behind. 
                 Sided with the very players we were supposed to be fighting against. I was alone again, 
                 but this time it hit different. <span className="italic">Harder.</span>
               </p>
@@ -186,20 +186,20 @@ export default function HowWeMet() {
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 <span className="text-[#8B4D5C] font-medium">November 2025.</span> I noticed someone new in the game. 
-                Not new to the game itself—she'd been around—but new to <em>me</em>. 
+                Not new to the game itself she'd been around but new to <em>me</em>. 
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                <span className="font-medium">PRi.</span>
+                <span className="font-medium">PRiViLEDGE</span>
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 There was something different about her. While everyone else was chaotic, loud, 
-                always trying to prove something—she was <span className="italic">calm</span>. 
+                always trying to prove something she was <span className="italic">calm</span>. 
                 Quiet. She moved through the server with this graceful energy that made me stop 
                 and actually look.
               </p>
@@ -209,7 +209,7 @@ export default function HowWeMet() {
               >
                 And then I noticed the crown. This little <span className="text-[#8B4D5C] font-medium">8-bit crown</span> sitting 
                 on her avatar. Something about it just... caught me. It was simple, but elegant. 
-                Like her whole aesthetic—this beautiful outfit, put together with actual thought and care. 
+                Like her whole aesthetic.this beautiful outfit, put together with actual thought and care. 
                 She stood out without even trying.
               </p>
             </section>
@@ -250,7 +250,7 @@ export default function HowWeMet() {
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 For <span className="font-medium">four weeks</span>, I didn't say a word to her. I just... watched. 
-                Not in a weird way—I just noticed her. Every time she was in a server, I'd see her. 
+                Not in a weird way I just noticed her. Every time she was in a server, I'd see her. 
                 I'd notice the way she played, the way she carried herself. She never got involved 
                 in the drama. She was just <em>there</em>, doing her own thing, being peaceful.
               </p>
@@ -283,7 +283,7 @@ export default function HowWeMet() {
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 I don't even remember exactly what I said. Something about the crown. I just 
-                asked about it—where she got it, why she wore it. Something simple. Something safe.
+                asked about it where she got it, why she wore it. Something simple. Something safe.
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
@@ -298,7 +298,7 @@ export default function HowWeMet() {
               >
                 She didn't know I was the strongest player in the game. She didn't know my 
                 reputation, my history, any of it. And honestly? <span className="italic">That's what made it special.</span> 
-                She liked me for <em>me</em>—not for who I was in the fighting community, not for 
+                She liked me for <em>me</em> not for who I was in the fighting community, not for 
                 what I could do. Just me.
               </p>
             </section>
@@ -315,7 +315,7 @@ export default function HowWeMet() {
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                We became friends naturally. No big dramatic moment—just conversations that got longer, 
+                We became friends naturally. No big dramatic moment just conversations that got longer, 
                 nights that got later, jokes that became inside references. She filled a space I 
                 didn't even know was empty.
               </p>
@@ -324,7 +324,7 @@ export default function HowWeMet() {
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 From <span className="font-medium">March</span>, when I was nothing but anger and loneliness, 
-                to <span className="font-medium">November</span>, when I finally found someone who saw the real me—it 
+                to <span className="font-medium">November</span>, when I finally found someone who saw the real me.it 
                 was a journey I never expected to take.
               </p>
               <p 
