@@ -567,11 +567,31 @@ function MemoryPage() {
                   key={index}
                   className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white hover:scale-[1.02] transition-transform duration-300"
                 >
-                  <img 
-                    src={imgSrc} 
-                    alt={`${memory.title} - Photo ${index + 2}`}
-                    className="w-full h-auto"
-                  />
+                  {imgSrc ? (
+                    <img 
+                      src={imgSrc} 
+                      alt={`${memory.title} - Photo ${index + 2}`}
+                      className="w-full h-auto"
+                    />
+                  ) : (
+                    <div className="aspect-[4/3] bg-gradient-to-br from-rose-50 to-amber-50/50 flex flex-col items-center justify-center p-6">
+                      <div className="w-16 h-16 rounded-full bg-white/80 shadow-sm flex items-center justify-center mb-3">
+                        <span className="text-2xl">📷</span>
+                      </div>
+                      <p 
+                        className="text-[#C4A5A5] text-sm text-center"
+                        style={{ fontFamily: "'Lora', serif" }}
+                      >
+                        Photo {index + 2}
+                      </p>
+                      <p 
+                        className="text-[#D4B5B5] text-xs text-center mt-1 italic"
+                        style={{ fontFamily: "'Lora', serif" }}
+                      >
+                        Add a memory here
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))
             ) : (

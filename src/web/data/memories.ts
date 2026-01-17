@@ -71,7 +71,7 @@ export const memories: Memory[] = [
     caption: "Those weeks of falling 🌙", 
     date: "November 2025",
     src: "/@website-editor/images/5b4759580abb.jpeg",
-    additionalImages: ["/@website-editor/images/e47094798b95.jpeg", "/@website-editor/images/54028bf7830c.jpeg"],
+    additionalImages: ["/@website-editor/images/e47094798b95.jpeg", "/@website-editor/images/54028bf7830c.jpeg", "", ""],
     story: "After that first conversation about her crown, we added each other. But then I noticed something that scared me. She was connected to my enemies. People who had betrayed me. I panicked. I removed her without explanation.",
     storyParagraphs: [
       "After that first conversation about her crown, we added each other. I remember my heart racing just sending that friend request. But then I noticed something that scared me. She was connected to my enemies. People who had betrayed me. People I'd been fighting for months. My mind went to the worst place. Was she a spy? Was this a trap? I couldn't handle another betrayal.",
@@ -119,8 +119,8 @@ export const memories: Memory[] = [
     title: "We Became Official",
     caption: "November 23, midnight 💝", 
     date: "November 23, 2025",
-    src: "./roblox3.jpeg",
-    additionalImages: ["./roblox3.jpeg"],
+    src: "/@website-editor/images/95aaa8fbb336.jpeg",
+    additionalImages: [],
     story: "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. And then there was this one guy, her friend, who protected her when I couldn't. The jealousy I felt was unlike anything I'd experienced.",
     storyParagraphs: [
       "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. Enemies spreading rumors. And then there was this one guy, her friend, who protected her when I couldn't. He stepped in for her, and something in me snapped. Not anger. Fear. Pure, raw fear of losing her. I pushed her away. Told myself it was better this way.",
