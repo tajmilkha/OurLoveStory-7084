@@ -507,6 +507,101 @@ function Index() {
         </div>
       </section>
 
+      {/* Matching Outfits Section */}
+      <section className="relative z-10 py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center gap-2 mb-4">
+              <span className="text-2xl">👔</span>
+              <span className="text-rose-400 text-xl">💕</span>
+              <span className="text-2xl">👗</span>
+            </div>
+            <h2 
+              className="text-3xl md:text-4xl text-[#8B4D5C] mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Our Matching Outfits
+            </h2>
+            <p 
+              className="text-[#9C7B7B] max-w-lg mx-auto"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              Because when you find your person, you want to match with them in every world — 
+              even the pixelated ones ✨
+            </p>
+          </div>
+
+          {/* Outfit Gallery Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {[...Array(6)].map((_, index) => (
+              <div
+                key={index}
+                className="group relative aspect-square rounded-2xl bg-gradient-to-br from-white/80 to-rose-50/50 backdrop-blur-sm border-2 border-dashed border-rose-200/60 hover:border-rose-300 transition-all duration-300 overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-rose-100/50"
+              >
+                {/* Decorative background pattern */}
+                <div 
+                  className="absolute inset-0 opacity-5"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6c-3.5 0-6.5 3-6.5 6.5 0 6 6.5 10 6.5 10s6.5-4 6.5-10c0-3.5-3-6.5-6.5-6.5z' fill='%238B4D5C'/%3E%3C/svg%3E")`,
+                  }}
+                />
+                
+                {/* Center content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4">
+                  {/* Camera icon */}
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-rose-100/80 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-200/80 transition-all duration-300">
+                    <svg 
+                      className="w-7 h-7 md:w-8 md:h-8 text-[#8B4D5C]/60 group-hover:text-[#8B4D5C] transition-colors duration-300" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  
+                  {/* Text */}
+                  <div className="text-center">
+                    <p 
+                      className="text-[#8B4D5C]/70 text-sm md:text-base font-medium group-hover:text-[#8B4D5C] transition-colors duration-300"
+                      style={{ fontFamily: "'Lora', serif" }}
+                    >
+                      Add Photo
+                    </p>
+                    <p 
+                      className="text-[#C4A5A5] text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ fontFamily: "'Lora', serif" }}
+                    >
+                      Outfit #{index + 1}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Corner decoration */}
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-rose-300 text-sm">♥</span>
+                </div>
+
+                {/* Bottom decoration */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-200/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+
+          {/* Section footer text */}
+          <div className="text-center mt-10">
+            <p 
+              className="text-[#C4A5A5] italic text-sm"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              Coming soon: Our coordinated couple fits! 👫✨
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="relative z-10 py-12 px-6 text-center">
         <div className="flex flex-col items-center gap-4">
