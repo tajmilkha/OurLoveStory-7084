@@ -317,7 +317,7 @@ export const memories: Memory[] = [
     title: "Mid-Winter Love",
     caption: "Growing closer every day 💕", 
     date: "February 2026",
-    src: "/@website-editor/images/3f2c2c4939c7.jpeg",
+    src: "/@website-editor/images/2f5ff153d2cc.jpeg",
     additionalImages: ["./mid-winter-love.jpeg"],
     story: "February 2026. The middle of winter, but I've never felt warmer.",
     storyParagraphs: [
