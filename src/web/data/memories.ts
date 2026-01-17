@@ -168,8 +168,8 @@ export const memories: Memory[] = [
     title: "The 2v16 War",
     caption: "Us against the world ⚔️", 
     date: "December 2025",
-    src: "./6ae11c3f0a56.jpeg",
-    additionalImages: ["./6ae11c3f0a56.jpeg"],
+    src: "/@website-editor/images/6ae11c3f0a56.jpeg",
+    additionalImages: ["/@website-editor/images/6ae11c3f0a56.jpeg"],
     story: "December 2025. The month everything changed. The BR Team had been hunting us. People on both sides were trying to tear us apart. And then someone grabbed her.",
     storyParagraphs: [
       "December 2025. The month everything changed. The BR Team had been hunting us. People on both sides were trying to tear us apart. Enemies who wanted revenge on me saw her as the perfect target. They thought she was my weakness. They were wrong. She was my strength.",
