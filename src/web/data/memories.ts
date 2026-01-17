@@ -19,8 +19,8 @@ export const memories: Memory[] = [
     title: "First Match",
     caption: "When I first noticed her 👑", 
     date: "October 2025",
-    src: "./october-2025-memory.jpeg",
-    additionalImages: ["./october-2025-memory.jpeg"],
+    src: "/@website-editor/images/eaad8c001337.jpeg",
+    additionalImages: ["/@website-editor/images/53e55b5f5d4d.jpeg"],
     story: "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",
     storyParagraphs: [
       "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. I became the strongest. I had a reputation. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",

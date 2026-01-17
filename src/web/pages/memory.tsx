@@ -174,27 +174,40 @@ function MemoryPage() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className={`grid gap-4 ${
+            (memory.additionalImages?.length || 0) === 1 
+              ? 'grid-cols-1 max-w-lg mx-auto' 
+              : (memory.additionalImages?.length || 0) === 2
+                ? 'grid-cols-1 md:grid-cols-2'
+                : 'grid-cols-1 md:grid-cols-3'
+          }`}>
             {hasAdditionalImages ? (
-              memory.additionalImages.map((img, i) => (
-                <div key={i} className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white">
-                  <img 
-                    src={img} 
-                    alt={`${memory.title} - Photo ${i + 2}`}
-                    className="w-full h-auto"
-                  />
-                </div>
-              ))
+              <>
+                {memory.additionalImages.map((img, i) => (
+                  <div key={i} className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white">
+                    <img 
+                      src={img} 
+                      alt={`${memory.title} - Photo ${i + 2}`}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                ))}
+                {/* Show placeholder for next available slot */}
+                {memory.additionalImages.length < 3 && (
+                  <PhotoPlaceholder index={memory.additionalImages.length + 2} />
+                )}
+              </>
             ) : (
               <>
                 <PhotoPlaceholder index={2} />
                 <PhotoPlaceholder index={3} />
+                <PhotoPlaceholder index={4} />
               </>
             )}
           </div>
           
           {/* Placeholder hint */}
-          {!hasAdditionalImages && (
+          {(!hasAdditionalImages || memory.additionalImages.length < 3) && (
             <p 
               className="text-center text-[#C4A5A5] text-sm mt-4 italic"
               style={{ fontFamily: "'Lora', serif" }}
