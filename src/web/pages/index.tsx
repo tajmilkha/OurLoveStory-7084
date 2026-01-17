@@ -284,8 +284,8 @@ function Index() {
             }`}
             style={{ fontFamily: "'Lora', serif" }}
           >
-            It started with a random Roblox match in November 2025. Alpha and PRi, 
-            two strangers from different places, connected by pixels and late-night 
+            It started with a random Roblox match in November 2025. Alpha and PRiViLEDGE, 
+            two strangers from different places, connected by Roblox and late-night 
             gaming sessions. What began as "one more round" turned into hours of 
             laughter, secrets shared at 2 AM, and a love neither of us saw coming.
           </p>
