@@ -2,6 +2,7 @@ import { Route, Switch } from "wouter";
 import Index from "./pages/index";
 import MemoryPage from "./pages/memory";
 import HowWeMet from "./pages/how-we-met";
+import ChapterTwo from "./pages/chapter-two";
 import { Provider } from "./components/provider";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
                         <Switch>
                                 <Route path="/" component={Index} />
                                 <Route path="/how-we-met" component={HowWeMet} />
+                                <Route path="/chapter-two" component={ChapterTwo} />
                                 <Route path="/memory/:slug" component={MemoryPage} />
                         </Switch>
                 </Provider>

@@ -291,7 +291,7 @@ function Index() {
 
         {/* Call to Action */}
         <div 
-          className={`mt-16 flex flex-col sm:flex-row items-center gap-4 transition-all duration-1000 delay-700 ${
+          className={`mt-16 flex flex-col items-center gap-6 transition-all duration-1000 delay-700 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -304,15 +304,31 @@ function Index() {
             <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
             <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
-          <Link href="/how-we-met">
-            <a
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-white/70 backdrop-blur-sm border-2 border-rose-300 text-[#8B4D5C] rounded-full shadow-md hover:shadow-lg hover:bg-white/90 hover:border-rose-400 transition-all duration-300 hover:-translate-y-1"
-              style={{ fontFamily: "'Lora', serif" }}
-            >
-              <span className="text-lg">How We Met</span>
-              <span className="text-rose-400 group-hover:scale-110 transition-transform duration-300">🎮</span>
-            </a>
-          </Link>
+          
+          {/* Story Chapters */}
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-sm text-[#C4A5A5]" style={{ fontFamily: "'Lora', serif" }}>Read Our Story:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/how-we-met">
+                <a
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white/70 backdrop-blur-sm border border-rose-200 text-[#8B4D5C] rounded-full shadow-sm hover:shadow-md hover:bg-white/90 hover:border-rose-300 transition-all duration-300 text-sm"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  <span className="text-rose-400">🎮</span>
+                  <span>Chapter One</span>
+                </a>
+              </Link>
+              <Link href="/chapter-two">
+                <a
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white/70 backdrop-blur-sm border border-rose-200 text-[#8B4D5C] rounded-full shadow-sm hover:shadow-md hover:bg-white/90 hover:border-rose-300 transition-all duration-300 text-sm"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  <span className="text-rose-400">⚔️</span>
+                  <span>Chapter Two</span>
+                </a>
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Decorative bottom element */}
