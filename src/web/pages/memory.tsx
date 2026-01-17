@@ -556,10 +556,12 @@ function MemoryPage() {
             </h2>
           </div>
           
-          <div className={`grid gap-4 max-w-2xl mx-auto ${
-            hasAdditionalImages && memory.additionalImages.length > 1 
-              ? 'grid-cols-1 sm:grid-cols-2' 
-              : 'grid-cols-1 max-w-lg'
+          <div className={`grid gap-4 mx-auto ${
+            hasAdditionalImages && memory.additionalImages.length >= 4
+              ? 'grid-cols-2 max-w-3xl'
+              : hasAdditionalImages && memory.additionalImages.length > 1 
+                ? 'grid-cols-1 sm:grid-cols-2 max-w-2xl' 
+                : 'grid-cols-1 max-w-lg'
           }`}>
             {hasAdditionalImages && memory.additionalImages.length > 0 ? (
               memory.additionalImages.map((imgSrc, index) => (
