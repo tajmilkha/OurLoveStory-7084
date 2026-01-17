@@ -218,7 +218,7 @@ export const memories: Memory[] = [
     caption: "She said yes 💍", 
     date: "January 9, 2026",
     src: "/@website-editor/images/a8977ff64d92.jpeg",
-    additionalImages: ["./engaged-moment.jpeg"],
+    additionalImages: [],
     story: "January 9, 2026. The day I asked her to spend forever with me.",
     storyParagraphs: [
       "January 9, 2026. The day I asked her to spend forever with me. We'd already told our families about us. That was terrifying. Making this real to the people in our actual lives. But they supported us. They saw what we saw: something real, something worth fighting for.",
