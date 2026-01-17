@@ -10,6 +10,8 @@ export interface Memory {
   storyParagraphs: string[];
   songTitle?: string;
   songArtist?: string;
+  songLyrics?: string[];
+  hasInteractivePlayer?: boolean;
 }
 
 export const memories: Memory[] = [
@@ -26,6 +28,40 @@ export const memories: Memory[] = [
       "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. I became the strongest. I had a reputation. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",
       "Then one day in November, I noticed someone new. Not new to the game, she'd been around, but new to me. PRiViLEDGE. There was something different about her. While everyone else was chaotic, loud, always trying to prove something, she was calm. Quiet. She moved through the server with this graceful energy that made me stop and actually look.",
       "And then I noticed the crown. This little 8-bit crown sitting on her avatar. Something about it just... caught me. It was simple, but elegant. Like her whole aesthetic. This beautiful outfit, put together with actual thought and care. She stood out without even trying. For four weeks, I didn't say a word to her. I just watched. Noticed her. Every time she was in a server, I'd see her. I'd notice the way she played, the way she carried herself. She never got involved in the drama. She was just there, doing her own thing, being peaceful. And I was drawn to that peace like I'd been wandering in chaos my whole life.",
+    ],
+    songTitle: "Love at First Sight",
+    songArtist: "A Country Ballad of Two Hearts (2025)",
+    hasInteractivePlayer: true,
+    songLyrics: [
+      "♪ Verse 1 ♪",
+      "I was wandering through the pixels, lost without a light",
+      "Fighting battles in a game, searching for what's right",
+      "Then I saw her in the server, moving like a dream",
+      "With an 8-bit crown upon her head, the prettiest I'd seen",
+      "",
+      "♪ Chorus ♪",
+      "Love at first sight in a world of blocks and codes",
+      "She walked into my empty heart and made it feel like home",
+      "From the chaos of the servers to the peace within her eyes",
+      "I knew right then and there, darlin', this was love at first sight",
+      "",
+      "♪ Verse 2 ♪",
+      "Four weeks I watched her silently, too scared to say a word",
+      "The way she moved through all the noise, the calmest I'd ever heard",
+      "Her outfit spoke of elegance, her spirit spoke of grace",
+      "I was the strongest in the game, but weak before her face",
+      "",
+      "♪ Bridge ♪",
+      "They said it couldn't happen, love through a screen so bright",
+      "But every time I see her name, everything feels right",
+      "From pixels to forever, from gaming to a ring",
+      "She turned my world from silence into everything",
+      "",
+      "♪ Final Chorus ♪",
+      "Love at first sight in a world of blocks and codes",
+      "She walked into my broken heart and made it feel like gold",
+      "From that crown upon her avatar to the day I made her mine",
+      "I'll spend forever grateful for that love at first sight",
     ]
   },
   { 

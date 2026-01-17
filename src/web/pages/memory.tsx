@@ -37,6 +37,352 @@ const PhotoPlaceholder = ({ index }: { index: number }) => (
   </div>
 );
 
+// Floating heart for the song player animation
+const SongFloatingHeart = ({ delay, left, isPlaying }: { delay: number; left: string; isPlaying: boolean }) => (
+  <div
+    className={`absolute text-rose-400/60 pointer-events-none transition-opacity duration-500 ${
+      isPlaying ? 'opacity-100' : 'opacity-0'
+    }`}
+    style={{
+      left,
+      bottom: "0px",
+      fontSize: "16px",
+      animation: isPlaying ? `floatUp 4s ease-out ${delay}s infinite` : 'none',
+    }}
+  >
+    ♥
+  </div>
+);
+
+// Interactive Song Player Component
+const InteractiveSongPlayer = ({ memory, isLoaded }: { memory: Memory; isLoaded: boolean }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [visibleLines, setVisibleLines] = useState(0);
+  
+  useEffect(() => {
+    if (isPlaying && memory.songLyrics) {
+      const timer = setInterval(() => {
+        setVisibleLines(prev => {
+          if (prev >= memory.songLyrics!.length) {
+            return prev;
+          }
+          return prev + 1;
+        });
+      }, 800);
+      return () => clearInterval(timer);
+    } else if (!isPlaying) {
+      setVisibleLines(0);
+    }
+  }, [isPlaying, memory.songLyrics]);
+
+  // Generate hearts for animation
+  const songHearts = [
+    { delay: 0, left: "5%" },
+    { delay: 1.5, left: "15%" },
+    { delay: 0.8, left: "85%" },
+    { delay: 2, left: "95%" },
+    { delay: 1.2, left: "50%" },
+    { delay: 2.5, left: "75%" },
+    { delay: 0.5, left: "25%" },
+  ];
+
+  // If this memory has the interactive player
+  if (memory.hasInteractivePlayer && memory.songLyrics) {
+    return (
+      <div 
+        className={`mb-10 transition-all duration-700 delay-500 ${
+          isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        <style>{`
+          @keyframes floatUp {
+            0% {
+              transform: translateY(0) scale(1);
+              opacity: 0;
+            }
+            10% {
+              opacity: 0.8;
+            }
+            50% {
+              opacity: 0.6;
+            }
+            100% {
+              transform: translateY(-300px) scale(0.5);
+              opacity: 0;
+            }
+          }
+          @keyframes pulse-glow {
+            0%, 100% {
+              box-shadow: 0 0 20px rgba(244, 63, 94, 0.3), 0 0 40px rgba(244, 63, 94, 0.1);
+            }
+            50% {
+              box-shadow: 0 0 30px rgba(244, 63, 94, 0.5), 0 0 60px rgba(244, 63, 94, 0.2);
+            }
+          }
+          @keyframes spin-slow {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes color-shift {
+            0%, 100% {
+              background: linear-gradient(135deg, #FDF2F8 0%, #FFF5F0 50%, #FDF2F8 100%);
+            }
+            50% {
+              background: linear-gradient(135deg, #FECDD3 0%, #FED7AA 50%, #FECDD3 100%);
+            }
+          }
+        `}</style>
+        
+        <div 
+          className={`relative rounded-2xl p-6 border overflow-hidden transition-all duration-1000 ${
+            isPlaying 
+              ? 'border-rose-300 bg-gradient-to-br from-rose-100/90 via-amber-50/70 to-rose-100/90' 
+              : 'border-rose-200/40 bg-gradient-to-br from-rose-50/80 via-amber-50/50 to-rose-50/80'
+          }`}
+          style={{
+            animation: isPlaying ? 'color-shift 6s ease-in-out infinite' : 'none',
+          }}
+        >
+          {/* Animated floating hearts */}
+          {songHearts.map((heart, i) => (
+            <SongFloatingHeart key={i} {...heart} isPlaying={isPlaying} />
+          ))}
+          
+          {/* Vinyl record decoration */}
+          <div className="absolute -right-8 -top-8 w-32 h-32 opacity-10">
+            <div 
+              className="w-full h-full rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#333] relative"
+              style={{
+                animation: isPlaying ? 'spin-slow 4s linear infinite' : 'none',
+              }}
+            >
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#222] border border-white/10" />
+              <div className="absolute inset-[40%] rounded-full bg-rose-400" />
+            </div>
+          </div>
+          
+          {/* Musical notes decoration */}
+          <div className={`absolute left-4 top-4 text-xl transition-all duration-500 ${isPlaying ? 'text-rose-400/60 animate-bounce' : 'text-rose-200/40'}`}>♪</div>
+          <div className={`absolute right-12 bottom-4 text-lg transition-all duration-500 ${isPlaying ? 'text-rose-400/60 animate-bounce' : 'text-rose-200/40'}`} style={{ animationDelay: '0.5s' }}>♫</div>
+          
+          <div className="relative text-center">
+            {/* Interactive play button */}
+            <button
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="relative w-20 h-20 mx-auto mb-4 group focus:outline-none"
+              style={{
+                animation: isPlaying ? 'pulse-glow 2s ease-in-out infinite' : 'none',
+              }}
+            >
+              {/* Vinyl record visual */}
+              <div 
+                className={`absolute inset-0 rounded-full bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] shadow-lg transition-transform duration-300 group-hover:scale-105`}
+                style={{
+                  animation: isPlaying ? 'spin-slow 3s linear infinite' : 'none',
+                }}
+              >
+                <div className="absolute inset-2 rounded-full border border-white/5" />
+                <div className="absolute inset-3 rounded-full border border-white/5" />
+                <div className="absolute inset-4 rounded-full border border-white/5" />
+                <div className="absolute inset-[30%] rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center">
+                  <span className="text-white text-lg transition-transform duration-200">
+                    {isPlaying ? '⏸' : '▶'}
+                  </span>
+                </div>
+              </div>
+              {/* Spinning effect glow */}
+              <div className={`absolute -inset-2 rounded-full blur-md -z-10 transition-all duration-500 ${
+                isPlaying ? 'bg-rose-400/40' : 'bg-rose-400/20'
+              }`} />
+            </button>
+            
+            <h3 
+              className="text-lg text-[#8B4D5C] font-medium mb-1"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Our Song
+            </h3>
+            
+            {/* Song title and artist */}
+            <div className="mb-4">
+              <p 
+                className="text-[#8B4D5C] font-semibold text-xl mb-1"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                {memory.songTitle}
+              </p>
+              <p 
+                className="text-[#B89999] text-sm italic"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                {memory.songArtist}
+              </p>
+            </div>
+            
+            {/* Play instruction */}
+            <p 
+              className={`text-sm mb-4 transition-all duration-500 ${
+                isPlaying ? 'text-rose-500' : 'text-[#C4A5A5]'
+              }`}
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              {isPlaying ? '♪ Now playing... ♪' : 'Tap to reveal our love song'}
+            </p>
+            
+            {/* Animated lyrics container */}
+            <div 
+              className={`overflow-hidden transition-all duration-700 ease-out ${
+                isPlaying ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-inner border border-rose-100/50 text-left">
+                <div className="space-y-2">
+                  {memory.songLyrics.map((line, index) => {
+                    const isVerse = line.startsWith('♪');
+                    const isEmpty = line === '';
+                    const isVisible = index < visibleLines;
+                    
+                    return (
+                      <p
+                        key={index}
+                        className={`transition-all duration-500 ${
+                          isVisible 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-4'
+                        } ${
+                          isVerse 
+                            ? 'text-rose-500 font-semibold text-center mt-4 mb-2' 
+                            : isEmpty 
+                              ? 'h-2' 
+                              : 'text-[#7A5A5A]'
+                        }`}
+                        style={{ 
+                          fontFamily: isVerse ? "'Cormorant Garamond', serif" : "'Lora', serif",
+                          transitionDelay: `${index * 50}ms`,
+                        }}
+                      >
+                        {line}
+                      </p>
+                    );
+                  })}
+                </div>
+                
+                {/* Heart divider at the end */}
+                {visibleLines >= memory.songLyrics.length && (
+                  <div className="flex items-center justify-center gap-2 mt-6 animate-pulse">
+                    <span className="text-rose-300">♥</span>
+                    <span className="text-rose-400">♥</span>
+                    <span className="text-rose-500">♥</span>
+                    <span className="text-rose-400">♥</span>
+                    <span className="text-rose-300">♥</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Default song player for other memories
+  return (
+    <div 
+      className={`mb-10 transition-all duration-700 delay-500 ${
+        isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
+      <div className="relative bg-gradient-to-br from-rose-50/80 via-amber-50/50 to-rose-50/80 rounded-2xl p-6 border border-rose-200/40 overflow-hidden">
+        {/* Vinyl record decoration */}
+        <div className="absolute -right-8 -top-8 w-32 h-32 opacity-10">
+          <div className="w-full h-full rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#333] relative">
+            <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#222] border border-white/10" />
+            <div className="absolute inset-[40%] rounded-full bg-rose-400" />
+          </div>
+        </div>
+        
+        {/* Musical notes decoration */}
+        <div className="absolute left-4 top-4 text-rose-200/40 text-xl">♪</div>
+        <div className="absolute right-12 bottom-4 text-rose-200/40 text-lg">♫</div>
+        
+        <div className="relative text-center">
+          {/* Music icon container */}
+          <div className="relative w-16 h-16 mx-auto mb-4">
+            {/* Vinyl record visual */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] shadow-lg">
+              <div className="absolute inset-2 rounded-full border border-white/5" />
+              <div className="absolute inset-3 rounded-full border border-white/5" />
+              <div className="absolute inset-4 rounded-full border border-white/5" />
+              <div className="absolute inset-[35%] rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center">
+                <span className="text-white text-xs">♥</span>
+              </div>
+            </div>
+            {/* Spinning effect glow */}
+            <div className="absolute -inset-1 rounded-full bg-rose-400/20 blur-md -z-10" />
+          </div>
+          
+          <h3 
+            className="text-lg text-[#8B4D5C] font-medium mb-2"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Our Song
+          </h3>
+          
+          {memory.songTitle ? (
+            /* Display song if one is set */
+            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-rose-100/50">
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center shadow-md">
+                  <span className="text-white text-lg">🎵</span>
+                </div>
+                <div className="text-left">
+                  <p 
+                    className="text-[#8B4D5C] font-medium"
+                    style={{ fontFamily: "'Lora', serif" }}
+                  >
+                    {memory.songTitle}
+                  </p>
+                  {memory.songArtist && (
+                    <p 
+                      className="text-[#B89999] text-sm"
+                      style={{ fontFamily: "'Lora', serif" }}
+                    >
+                      {memory.songArtist}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            /* Placeholder when no song is set */
+            <div className="space-y-3">
+              <p 
+                className="text-[#C4A5A5] text-sm"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                Add a song for this memory
+              </p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full border border-dashed border-rose-200/60">
+                <span className="text-rose-400">🎵</span>
+                <span 
+                  className="text-[#B89999] text-sm italic"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  What song reminds you of this moment?
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function MemoryPage() {
   const { slug } = useParams<{ slug: string }>();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -236,95 +582,7 @@ function MemoryPage() {
         </div>
 
         {/* Our Song Section */}
-        <div 
-          className={`mb-10 transition-all duration-700 delay-500 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="relative bg-gradient-to-br from-rose-50/80 via-amber-50/50 to-rose-50/80 rounded-2xl p-6 border border-rose-200/40 overflow-hidden">
-            {/* Vinyl record decoration */}
-            <div className="absolute -right-8 -top-8 w-32 h-32 opacity-10">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#333] relative">
-                <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#222] border border-white/10" />
-                <div className="absolute inset-[40%] rounded-full bg-rose-400" />
-              </div>
-            </div>
-            
-            {/* Musical notes decoration */}
-            <div className="absolute left-4 top-4 text-rose-200/40 text-xl">♪</div>
-            <div className="absolute right-12 bottom-4 text-rose-200/40 text-lg">♫</div>
-            
-            <div className="relative text-center">
-              {/* Music icon container */}
-              <div className="relative w-16 h-16 mx-auto mb-4">
-                {/* Vinyl record visual */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] shadow-lg">
-                  <div className="absolute inset-2 rounded-full border border-white/5" />
-                  <div className="absolute inset-3 rounded-full border border-white/5" />
-                  <div className="absolute inset-4 rounded-full border border-white/5" />
-                  <div className="absolute inset-[35%] rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center">
-                    <span className="text-white text-xs">♥</span>
-                  </div>
-                </div>
-                {/* Spinning effect glow */}
-                <div className="absolute -inset-1 rounded-full bg-rose-400/20 blur-md -z-10" />
-              </div>
-              
-              <h3 
-                className="text-lg text-[#8B4D5C] font-medium mb-2"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                Our Song
-              </h3>
-              
-              {memory.songTitle ? (
-                /* Display song if one is set */
-                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-rose-100/50">
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center shadow-md">
-                      <span className="text-white text-lg">🎵</span>
-                    </div>
-                    <div className="text-left">
-                      <p 
-                        className="text-[#8B4D5C] font-medium"
-                        style={{ fontFamily: "'Lora', serif" }}
-                      >
-                        {memory.songTitle}
-                      </p>
-                      {memory.songArtist && (
-                        <p 
-                          className="text-[#B89999] text-sm"
-                          style={{ fontFamily: "'Lora', serif" }}
-                        >
-                          {memory.songArtist}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                /* Placeholder when no song is set */
-                <div className="space-y-3">
-                  <p 
-                    className="text-[#C4A5A5] text-sm"
-                    style={{ fontFamily: "'Lora', serif" }}
-                  >
-                    Add a song for this memory
-                  </p>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full border border-dashed border-rose-200/60">
-                    <span className="text-rose-400">🎵</span>
-                    <span 
-                      className="text-[#B89999] text-sm italic"
-                      style={{ fontFamily: "'Lora', serif" }}
-                    >
-                      What song reminds you of this moment?
-                    </span>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
+        <InteractiveSongPlayer memory={memory} isLoaded={isLoaded} />
 
         {/* Navigation */}
         <nav 
