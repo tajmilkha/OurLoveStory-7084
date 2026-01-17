@@ -354,6 +354,17 @@ function Index() {
                   <span>Chapter Five</span>
                 </a>
               </Link>
+              <Link href="/chapter-six">
+                <a
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sky-300 to-indigo-300 text-white rounded-full shadow-md hover:shadow-lg hover:from-sky-400 hover:to-indigo-400 transition-all duration-300 text-sm border border-sky-200/50 relative"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-sky-400 rounded-full animate-pulse" />
+                  <span>✈️</span>
+                  <span>Chapter Six</span>
+                  <span className="text-xs opacity-75">(Aug 2026)</span>
+                </a>
+              </Link>
             </div>
           </div>
         </div>

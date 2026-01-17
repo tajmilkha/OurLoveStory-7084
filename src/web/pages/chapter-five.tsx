@@ -440,7 +440,7 @@ export default function ChapterFive() {
 
           {/* Chapter Navigation */}
           <div 
-            className={`mt-12 flex justify-between items-center gap-4 transition-all duration-1000 delay-700 ${
+            className={`mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 transition-all duration-1000 delay-700 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -455,13 +455,16 @@ export default function ChapterFive() {
               </a>
             </Link>
             
-            <Link href="/#story">
+            <Link href="/chapter-six">
               <a
-                className="inline-flex items-center gap-3 px-6 py-3 bg-[#8B4D5C] text-white rounded-full shadow-md hover:shadow-lg hover:bg-[#7A3D4C] transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-sky-300 to-indigo-300 text-white rounded-full shadow-md hover:shadow-lg hover:from-sky-400 hover:to-indigo-400 transition-all duration-300 hover:-translate-y-1 relative"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                <span>Back to Timeline</span>
-                <span>♥</span>
+                <span className="absolute -top-1 -right-1 w-2 h-2 bg-sky-400 rounded-full animate-pulse" />
+                <span className="hidden sm:inline">Chapter Six: When Pixels Become Reality</span>
+                <span className="sm:hidden">Next</span>
+                <span>✈️</span>
+                <span>→</span>
               </a>
             </Link>
           </div>

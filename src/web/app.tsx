@@ -6,6 +6,7 @@ import ChapterTwo from "./pages/chapter-two";
 import ChapterThree from "./pages/chapter-three";
 import ChapterFour from "./pages/chapter-four";
 import ChapterFive from "./pages/chapter-five";
+import ChapterSix from "./pages/chapter-six";
 import { Provider } from "./components/provider";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                                 <Route path="/chapter-three" component={ChapterThree} />
                                 <Route path="/chapter-four" component={ChapterFour} />
                                 <Route path="/chapter-five" component={ChapterFive} />
+                                <Route path="/chapter-six" component={ChapterSix} />
                                 <Route path="/memory/:slug" component={MemoryPage} />
                         </Switch>
                 </Provider>
