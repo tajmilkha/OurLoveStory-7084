@@ -31,7 +31,7 @@ export const memories: Memory[] = [
     title: "Getting to Know You",
     caption: "Those weeks of falling 🌙", 
     date: "November 2025",
-    src: "./roblox2.jpeg",
+    src: "./5b4759580abb.jpeg",
     additionalImages: [],
     story: "Four weeks of hanging out, late-night gaming sessions, conversations that got longer, jokes that became inside references. She didn't know about my reputation, my history with the fighters. She liked me for me. This was when we went from strangers to something more.",
     storyParagraphs: [
@@ -59,7 +59,7 @@ export const memories: Memory[] = [
     title: "The 2v16 War",
     caption: "Us against the world ⚔️", 
     date: "December 2025",
-    src: "./roblox4.jpeg",
+    src: "./6ae11c3f0a56.jpeg",
     additionalImages: [],
     story: "December 2025. When the BR Team touched PRiViLEDGE, I snapped. For hours, we fought side by side—two against sixteen. She never left my side. We became the strongest couple in the game that day. This was the moment I knew she'd always have my back.",
     storyParagraphs: [
