@@ -217,7 +217,7 @@ export const memories: Memory[] = [
     title: "Engaged",
     caption: "She said yes 💍", 
     date: "January 9, 2026",
-    src: "./engaged-moment.jpeg",
+    src: "/@website-editor/images/a8977ff64d92.jpeg",
     additionalImages: ["./engaged-moment.jpeg"],
     story: "January 9, 2026. The day I asked her to spend forever with me.",
     storyParagraphs: [
