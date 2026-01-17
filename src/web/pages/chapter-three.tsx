@@ -251,21 +251,55 @@ export default function ChapterThree() {
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                She told me she was about to delete me. That she thought I didn't care anymore. 
-                That she was ready to give up on whatever this was between us because I kept 
-                pulling away.
+                She told me she saw it. She saw how jealous I was. She noticed every single time 
+                I pulled away, every time I got cold, every time my hurt showed through the cracks 
+                I tried so hard to hide.
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                And then it hit me. Like a truck. Like the world suddenly snapping into focus.
+                And then she said something that completely shattered me.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5 italic border-l-2 border-rose-400/50 pl-4"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                She was so afraid of losing me that she was about to delete the entire game.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                Not just me. Not just our friendship. <span className="font-medium text-[#8B4D5C]">The whole game.</span> Everything. 
+                She was willing to leave it all behind—the friends, the memories, the world we'd built—just 
+                to choose me. To prove she wanted <span className="italic">me</span>.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                That's when I understood. This wasn't just some online friendship. This wasn't just 
+                flirting or games or passing time. She was ready to walk away from everything—for me. 
+                She was choosing me before I even asked her to.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                And it hit me. Like a wave crashing over everything I thought I knew.
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg text-center font-medium text-[#8B4D5C]"
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 I loved her. I was completely, stupidly, terrifyingly in love with her.
+              </p>
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg mt-5 text-center"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                And somehow, impossibly, she loved me too.
               </p>
             </section>
 
