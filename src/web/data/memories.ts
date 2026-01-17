@@ -19,10 +19,11 @@ export const memories: Memory[] = [
     date: "October 2025",
     src: "./october-2025-memory.jpeg",
     additionalImages: [],
-    story: "October 2025 — the month everything changed. I saw her in the game with that little 8-bit crown, elegant outfit, calm presence. While everyone else was chaotic and loud, she moved with grace. For four weeks I just watched, noticed her, before I finally found the courage to say something about that crown.",
+    story: "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",
     storyParagraphs: [
-      "October 2025 — the month everything changed. I saw her in the game with that little 8-bit crown, elegant outfit, calm presence. While everyone else was chaotic and loud, she moved with grace.",
-      "For four weeks I just watched, noticed her, before I finally found the courage to say something about that crown.",
+      "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. I became the strongest. I had a reputation. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",
+      "Then one day in November, I noticed someone new. Not new to the game—she'd been around—but new to me. PRiViLEDGE. There was something different about her. While everyone else was chaotic, loud, always trying to prove something, she was calm. Quiet. She moved through the server with this graceful energy that made me stop and actually look.",
+      "And then I noticed the crown. This little 8-bit crown sitting on her avatar. Something about it just... caught me. It was simple, but elegant. Like her whole aesthetic—this beautiful outfit, put together with actual thought and care. She stood out without even trying. For four weeks, I didn't say a word to her. I just watched. Noticed her. Every time she was in a server, I'd see her. I'd notice the way she played, the way she carried herself. She never got involved in the drama. She was just there, doing her own thing, being peaceful. And I was drawn to that peace like I'd been wandering in chaos my whole life.",
     ]
   },
   { 
@@ -33,10 +34,11 @@ export const memories: Memory[] = [
     date: "November 2025",
     src: "./5b4759580abb.jpeg",
     additionalImages: [],
-    story: "Four weeks of hanging out, late-night gaming sessions, conversations that got longer, jokes that became inside references. She didn't know about my reputation, my history with the fighters. She liked me for me. This was when we went from strangers to something more.",
+    story: "After that first conversation about her crown, we added each other. But then I noticed something that scared me—she was connected to my enemies. People who had betrayed me. I panicked. I removed her without explanation.",
     storyParagraphs: [
-      "Four weeks of hanging out, late-night gaming sessions, conversations that got longer, jokes that became inside references.",
-      "She didn't know about my reputation, my history with the fighters. She liked me for me. This was when we went from strangers to something more.",
+      "After that first conversation about her crown, we added each other. I remember my heart racing just sending that friend request. But then I noticed something that scared me—she was connected to my enemies. People who had betrayed me. People I'd been fighting for months. My mind went to the worst place. Was she a spy? Was this a trap? I couldn't handle another betrayal.",
+      "So I did what I always did when I got scared. I pushed away. I removed her without explanation. Without giving her a chance. It's one of my biggest regrets. But the universe had other plans. Weeks later, we ran into each other randomly. I apologized. Tried to explain. And she said something that changed everything: she didn't know about the drama. She had no idea about the wars, my reputation, any of it. She was just... her. Just PRiViLEDGE. Just the girl with the crown who liked being peaceful.",
+      "We started over. Slowly. Carefully. Just greetings at first. Then playful interactions. Then conversations that got longer. Nights that got later. Jokes that became inside references. She didn't know I was the strongest player in the game. She didn't know my history. And honestly? That's what made it special. She liked me for me—not for who I was in the fighting community, not for what I could do. Just me. She filled a space I didn't even know was empty.",
     ]
   },
   { 
@@ -47,10 +49,11 @@ export const memories: Memory[] = [
     date: "November 23, 2025",
     src: "./roblox3.jpeg",
     additionalImages: [],
-    story: "November 23, 2025 at midnight. We both said we'd never e-date. We both said we weren't looking for anything. And then we did it anyway. That nervous confession, both of us scared but wanting it anyway. Our love story officially began.",
+    story: "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. And then there was this one guy—her friend—who protected her when I couldn't. The jealousy I felt was unlike anything I'd experienced.",
     storyParagraphs: [
-      "November 23, 2025 at midnight. We both said we'd never e-date. We both said we weren't looking for anything.",
-      "And then we did it anyway. That nervous confession, both of us scared but wanting it anyway. Our love story officially began.",
+      "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. Enemies spreading rumors. And then there was this one guy—her friend—who protected her when I couldn't. He stepped in for her, and something in me snapped. Not anger. Fear. Pure, raw fear of losing her. I pushed her away. Told myself it was better this way.",
+      "But I couldn't stay away. I had to know. So I asked her: 'How do you feel about him?' And she told me something that shattered every wall I'd built. She was about to delete me. She thought I didn't care. She thought I was playing games. In that moment, I realized I was in love with her. Not 'maybe.' Not 'kinda.' Completely, terrifyingly in love.",
+      "November 23, 2025. Midnight. We both said we'd never e-date. We both said we weren't looking for anything. We were both scared of getting hurt. And then we did it anyway. Both of us nervous. Both of us trembling behind our screens. Both of us choosing each other despite everything that said we shouldn't. That night, our love story officially began. We kept it quiet at first. Our little secret. But inside, I was glowing. I finally had something real.",
     ]
   },
   { 
@@ -61,10 +64,11 @@ export const memories: Memory[] = [
     date: "December 2025",
     src: "./6ae11c3f0a56.jpeg",
     additionalImages: [],
-    story: "December 2025. When the BR Team touched PRiViLEDGE, I snapped. For hours, we fought side by side—two against sixteen. She never left my side. We became the strongest couple in the game that day. This was the moment I knew she'd always have my back.",
+    story: "December 2025. The month everything changed. The BR Team had been hunting us. People on both sides were trying to tear us apart. And then someone grabbed her.",
     storyParagraphs: [
-      "December 2025. When the BR Team touched PRiViLEDGE, I snapped. For hours, we fought side by side—two against sixteen.",
-      "She never left my side. We became the strongest couple in the game that day. This was the moment I knew she'd always have my back.",
+      "December 2025. The month everything changed. The BR Team had been hunting us. People on both sides were trying to tear us apart. Enemies who wanted revenge on me saw her as the perfect target. They thought she was my weakness. They were wrong. She was my strength.",
+      "And then someone grabbed her. Touched her in the game. Tried to intimidate her because of me. I saw it happen, and something inside me snapped. Every bit of training, every fight I'd ever been in—it all came down to this moment. I stepped in front of her. And for the next few hours, it was two versus sixteen. Just us. Against everyone who ever tried to break us.",
+      "She never ran. She never left my side. We fought together—covering each other, protecting each other, moving as one. Old allies betrayed us. People I thought were friends switched sides. But she stayed. Always. We won that war. Not just the battle, but the whole war. We became the strongest couple in the game. But more than that, we became something unbreakable. That night, I knew—this girl would fight beside me through anything. And I would burn down the whole server for her.",
     ]
   },
   { 
@@ -75,10 +79,11 @@ export const memories: Memory[] = [
     date: "January 9, 2026",
     src: "./engaged-moment.jpeg",
     additionalImages: [],
-    story: "January 9, 2026. I asked her to spend forever with me. From pixels to promises, from late-night Roblox sessions to planning a real future together. She said yes. We're building something real, something beautiful, something that started with a game but became so much more.",
+    story: "January 9, 2026. The day I asked her to spend forever with me.",
     storyParagraphs: [
-      "January 9, 2026. I asked her to spend forever with me.",
-      "From pixels to promises, from late-night Roblox sessions to planning a real future together. She said yes. We're building something real, something beautiful, something that started with a game but became so much more.",
+      "January 9, 2026. The day I asked her to spend forever with me. We'd already told our families about us. That was terrifying—making this real to the people in our actual lives. But they supported us. They saw what we saw: something real, something worth fighting for.",
+      "The proposal wasn't grand. It wasn't public. It was just us, late at night, in the same game where we first met. I asked her to marry me. To be mine forever. Not just in the game, but in real life. To wait for August when we'd finally meet. To build a future together, one day at a time.",
+      "She said yes. And in that moment, everything we'd been through—the fights, the betrayals, the wars, the jealousy, the fear—it all made sense. Every battle had trained us for this. Every obstacle had made us stronger. We weren't just two people who met in a Roblox game anymore. We were engaged. We were building a life. And I promised her that day: I would protect her, choose her, love her—every single day. No matter what.",
     ]
   },
   { 
@@ -89,10 +94,11 @@ export const memories: Memory[] = [
     date: "January 2026",
     src: "./our-future.jpeg",
     additionalImages: [],
-    story: "January 2026. The month we got engaged and started planning our forever. From pixels to promises, from late-night Roblox sessions to dreaming about our real future together. She said yes. We're building something beautiful, something that started with a game but became so much more.",
+    story: "January 2026. We're engaged now. Actually engaged. Every time I think about it, my heart still races.",
     storyParagraphs: [
-      "January 2026. The month we got engaged and started planning our forever.",
-      "From pixels to promises, from late-night Roblox sessions to dreaming about our real future together. She said yes. We're building something beautiful, something that started with a game but became so much more.",
+      "January 2026. We're engaged now. Actually engaged. Every time I think about it, my heart still races. This girl who started as a stranger in a game, who caught my eye with an 8-bit crown, who stayed with me through wars and betrayals and 3 AM confessions—she's going to be my wife.",
+      "August 2026. That's when we meet. Not as avatars, not as usernames, but as ourselves. Real. Tangible. I can hold her hand. See her smile. Hear her laugh without a headset. It's everything we've been counting down to. Every day, the number gets smaller. Every day, I fall more in love with the idea of finally being with her.",
+      "We plan our future constantly now. Where we'll live. What we'll do. How we'll build this life together. The game that brought us together has become just one small part of something so much bigger. We're not just dating anymore. We're building. A future. A family. A forever. And it all started with me noticing a girl with a crown who moved through chaos like she owned it.",
     ]
   },
   { 
@@ -103,10 +109,11 @@ export const memories: Memory[] = [
     date: "February 2026",
     src: "./mid-winter-love.jpeg",
     additionalImages: [],
-    story: "February 2026 — the middle of our first winter as an engaged couple. Every day we grow closer. The countdown to August continues, but we're not just waiting—we're living. Late-night calls, inside jokes, planning our future, falling deeper in love. This is our daily life now, and it's beautiful.",
+    story: "February 2026. The middle of winter, but I've never felt warmer.",
     storyParagraphs: [
-      "February 2026 — the middle of our first winter as an engaged couple. Every day we grow closer.",
-      "The countdown to August continues, but we're not just waiting—we're living. Late-night calls, inside jokes, planning our future, falling deeper in love. This is our daily life now, and it's beautiful.",
+      "February 2026. The middle of winter, but I've never felt warmer. This is our life now—engaged, in love, counting down to August. Every morning I wake up thinking about her. Every night I fall asleep on call with her. The distance doesn't feel as far when we're this connected.",
+      "Our daily life has become this beautiful routine. Late-night calls that stretch until dawn. Inside jokes that no one else would understand. Planning sessions about our future that feel more real every day. She knows everything about me now—the good, the bad, the battles I fought, the anger I carried. And she loves me anyway. That still amazes me.",
+      "This isn't just an online relationship anymore. This is my life. She's my life. From pixels to promises, from Roblox to real love, from a game to a future. In a few months, I'll hold her for the first time. I'll see those eyes that I've only known through video calls. I'll finally be with my person. Until then, we're living. Growing. Falling deeper in love with every passing day. This is mid-winter love. And it's the warmest thing I've ever known.",
     ]
   },
 ];
