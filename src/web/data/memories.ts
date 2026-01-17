@@ -13,8 +13,8 @@ export const memories: Memory[] = [
     slug: "our-first-adventure",
     title: "Our First Adventure",
     caption: "Our first adventure together 💕", 
-    src: "./roblox1.jpeg",
-    story: "Write your story here... What made this moment special? What were you feeling? What do you remember most about this adventure together?"
+    src: "/@website-editor/images/95aaa8fbb336.jpeg",
+    story: "This screenshot shows the moment everything began. We met in the game, joked a little, and fought together. I didn't know it then, but that was the start of something real our adventure together."
   },
   { 
     id: 2, 

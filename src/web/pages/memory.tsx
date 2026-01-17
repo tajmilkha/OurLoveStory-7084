@@ -136,7 +136,7 @@ function MemoryPage() {
             className="text-2xl text-[#8B4D5C] mb-6 text-center"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Our Memory
+            Our Memory -How We Met and Started Our Adventure
           </h2>
           <p 
             className="text-[#9C7B7B] leading-relaxed text-lg text-center italic"
