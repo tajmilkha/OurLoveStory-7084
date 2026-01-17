@@ -4,6 +4,7 @@ import MemoryPage from "./pages/memory";
 import HowWeMet from "./pages/how-we-met";
 import ChapterTwo from "./pages/chapter-two";
 import ChapterThree from "./pages/chapter-three";
+import ChapterFour from "./pages/chapter-four";
 import { Provider } from "./components/provider";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                                 <Route path="/how-we-met" component={HowWeMet} />
                                 <Route path="/chapter-two" component={ChapterTwo} />
                                 <Route path="/chapter-three" component={ChapterThree} />
+                                <Route path="/chapter-four" component={ChapterFour} />
                                 <Route path="/memory/:slug" component={MemoryPage} />
                         </Switch>
                 </Provider>

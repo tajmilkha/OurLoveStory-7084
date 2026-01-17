@@ -37,7 +37,7 @@ const timelineMilestones: TimelineMilestone[] = [
   {
     date: "December 2025",
     title: "Epic 2v16 Game War",
-    description: "Us against the world—literally. Our legendary battle where we took on 16 players together and proved we're the ultimate duo. Gaming power couple energy!",
+    description: "When the BR Team touched PRi, Alpha snapped. For hours, we fought side by side—two against sixteen. She never left. We became the strongest couple in the game that day.",
     icon: "⚔️",
   },
   {
@@ -334,6 +334,15 @@ function Index() {
                 >
                   <span className="text-rose-400">💕</span>
                   <span>Chapter Three</span>
+                </a>
+              </Link>
+              <Link href="/chapter-four">
+                <a
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white/70 backdrop-blur-sm border border-rose-200 text-[#8B4D5C] rounded-full shadow-sm hover:shadow-md hover:bg-white/90 hover:border-rose-300 transition-all duration-300 text-sm"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  <span className="text-rose-400">⚔️</span>
+                  <span>Chapter Four</span>
                 </a>
               </Link>
             </div>
