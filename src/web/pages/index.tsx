@@ -345,6 +345,15 @@ function Index() {
                   <span>Chapter Four</span>
                 </a>
               </Link>
+              <Link href="/chapter-five">
+                <a
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-400 to-amber-300 text-white rounded-full shadow-md hover:shadow-lg hover:from-rose-500 hover:to-amber-400 transition-all duration-300 text-sm"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  <span>💍</span>
+                  <span>Chapter Five</span>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
