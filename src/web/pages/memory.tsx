@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "wouter";
-import { getMemoryBySlug, getAdjacentMemories, Memory } from "../data/memories";
+import { getMemoryBySlug, getAdjacentMemories, getTotalMemories, Memory } from "../data/memories";
 
 const FloatingHeart = ({ delay, left, size, duration }: { delay: number; left: string; size: number; duration: number }) => (
   <div
@@ -17,16 +17,39 @@ const FloatingHeart = ({ delay, left, size, duration }: { delay: number; left: s
   </div>
 );
 
+const PhotoPlaceholder = ({ index }: { index: number }) => (
+  <div className="relative rounded-2xl overflow-hidden border-2 border-dashed border-rose-200/60 bg-gradient-to-br from-rose-50/50 to-amber-50/50 aspect-video flex flex-col items-center justify-center p-6 text-center group hover:border-rose-300 transition-colors duration-300">
+    <div className="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+      <span className="text-xl">📷</span>
+    </div>
+    <p 
+      className="text-[#C4A5A5] font-medium mb-1"
+      style={{ fontFamily: "'Lora', serif" }}
+    >
+      Add Photo {index}
+    </p>
+    <p 
+      className="text-[#D4B5B5] text-sm"
+      style={{ fontFamily: "'Lora', serif" }}
+    >
+      Upload your memory here
+    </p>
+  </div>
+);
+
 function MemoryPage() {
   const { slug } = useParams<{ slug: string }>();
   const [isLoaded, setIsLoaded] = useState(false);
   const memory = getMemoryBySlug(slug || "");
+  const totalMemories = getTotalMemories();
   
   const adjacent = memory ? getAdjacentMemories(memory.id) : { prev: undefined, next: undefined };
 
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(false);
+    const timer = setTimeout(() => setIsLoaded(true), 50);
     window.scrollTo(0, 0);
+    return () => clearTimeout(timer);
   }, [slug]);
 
   const hearts = [
@@ -52,6 +75,9 @@ function MemoryPage() {
     );
   }
 
+  const hasAdditionalImages = memory.additionalImages && memory.additionalImages.length > 0;
+  const hasMultipleParagraphs = memory.storyParagraphs && memory.storyParagraphs.length > 0;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#FDF8F5] via-[#FFF5F0] to-[#FDF8F5] overflow-hidden relative">
       {/* Subtle pattern overlay */}
@@ -67,7 +93,7 @@ function MemoryPage() {
         <FloatingHeart key={i} {...heart} />
       ))}
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 py-12">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-12">
         {/* Back button */}
         <Link href="/#memories">
           <a 
@@ -112,9 +138,9 @@ function MemoryPage() {
           </p>
         </header>
 
-        {/* Photo */}
+        {/* Main Photo */}
         <div 
-          className={`relative mb-10 transition-all duration-700 delay-200 ${
+          className={`relative mb-8 transition-all duration-700 delay-200 ${
             isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
@@ -132,6 +158,52 @@ function MemoryPage() {
           </div>
         </div>
 
+        {/* Photo Gallery Section */}
+        <div 
+          className={`mb-10 transition-all duration-700 delay-300 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="text-center mb-6">
+            <h2 
+              className="text-xl text-[#8B4D5C] inline-flex items-center gap-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              <span>📸</span>
+              <span>More Photos from this Memory</span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {hasAdditionalImages ? (
+              memory.additionalImages.map((img, i) => (
+                <div key={i} className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white">
+                  <img 
+                    src={img} 
+                    alt={`${memory.title} - Photo ${i + 2}`}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))
+            ) : (
+              <>
+                <PhotoPlaceholder index={2} />
+                <PhotoPlaceholder index={3} />
+              </>
+            )}
+          </div>
+          
+          {/* Placeholder hint */}
+          {!hasAdditionalImages && (
+            <p 
+              className="text-center text-[#C4A5A5] text-sm mt-4 italic"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              💡 Add more photos to this memory to create a richer scrapbook entry
+            </p>
+          )}
+        </div>
+
         {/* Story section */}
         <div 
           className={`bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg shadow-rose-100/50 border border-rose-100/50 mb-10 transition-all duration-700 delay-400 ${
@@ -144,12 +216,72 @@ function MemoryPage() {
           >
             ♥ Our Story ♥
           </h2>
-          <p 
-            className="text-[#9C7B7B] leading-relaxed text-lg text-center italic"
-            style={{ fontFamily: "'Lora', serif" }}
-          >
-            {memory.story}
-          </p>
+          
+          {/* Story content - supports multiple paragraphs */}
+          <div className="space-y-4">
+            {hasMultipleParagraphs ? (
+              memory.storyParagraphs.map((paragraph, i) => (
+                <p 
+                  key={i}
+                  className="text-[#9C7B7B] leading-relaxed text-lg"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <p 
+                className="text-[#9C7B7B] leading-relaxed text-lg text-center italic"
+                style={{ fontFamily: "'Lora', serif" }}
+              >
+                {memory.story}
+              </p>
+            )}
+          </div>
+          
+          {/* Divider */}
+          <div className="flex justify-center my-8">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-px bg-gradient-to-r from-transparent to-rose-200" />
+              <span className="text-rose-300">♥</span>
+              <div className="w-12 h-px bg-gradient-to-l from-transparent to-rose-200" />
+            </div>
+          </div>
+          
+          {/* Add Your Story Section */}
+          <div className="bg-gradient-to-br from-rose-50/50 to-amber-50/50 rounded-2xl p-6 border border-dashed border-rose-200/60">
+            <div className="text-center mb-4">
+              <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center mx-auto mb-3">
+                <span className="text-lg">✍️</span>
+              </div>
+              <h3 
+                className="text-lg text-[#8B4D5C] font-medium"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Add to Your Story
+              </h3>
+            </div>
+            <p 
+              className="text-[#C4A5A5] text-center text-sm mb-4"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              This is your space to write more about this memory. What made this moment special? What were you feeling? What do you remember most? Share your personal thoughts here...
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
+                <span>💭</span> What you were thinking
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
+                <span>💫</span> Inside jokes
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
+                <span>🎵</span> Songs you associate
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
+                <span>🌟</span> Why this matters
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Navigation */}
@@ -190,7 +322,7 @@ function MemoryPage() {
         {/* Memory counter */}
         <div className="text-center mt-8">
           <p className="text-sm text-[#C4A5A5]" style={{ fontFamily: "'Lora', serif" }}>
-            Memory {memory.id} of 6
+            Memory {memory.id} of {totalMemories}
           </p>
         </div>
       </div>
