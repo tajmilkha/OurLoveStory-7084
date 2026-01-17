@@ -158,68 +158,9 @@ function MemoryPage() {
           </div>
         </div>
 
-        {/* Photo Gallery Section */}
-        <div 
-          className={`mb-10 transition-all duration-700 delay-300 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="text-center mb-6">
-            <h2 
-              className="text-xl text-[#8B4D5C] inline-flex items-center gap-2"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            >
-              <span>📸</span>
-              <span>More Photos from this Memory</span>
-            </h2>
-          </div>
-          
-          <div className={`grid gap-4 ${
-            (memory.additionalImages?.length || 0) === 1 
-              ? 'grid-cols-1 max-w-lg mx-auto' 
-              : (memory.additionalImages?.length || 0) === 2
-                ? 'grid-cols-1 md:grid-cols-2'
-                : 'grid-cols-1 md:grid-cols-3'
-          }`}>
-            {hasAdditionalImages ? (
-              <>
-                {memory.additionalImages.map((img, i) => (
-                  <div key={i} className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white">
-                    <img 
-                      src={img} 
-                      alt={`${memory.title} - Photo ${i + 2}`}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                ))}
-                {/* Show placeholder for next available slot */}
-                {memory.additionalImages.length < 3 && (
-                  <PhotoPlaceholder index={memory.additionalImages.length + 2} />
-                )}
-              </>
-            ) : (
-              <>
-                <PhotoPlaceholder index={2} />
-                <PhotoPlaceholder index={3} />
-                <PhotoPlaceholder index={4} />
-              </>
-            )}
-          </div>
-          
-          {/* Placeholder hint */}
-          {(!hasAdditionalImages || memory.additionalImages.length < 3) && (
-            <p 
-              className="text-center text-[#C4A5A5] text-sm mt-4 italic"
-              style={{ fontFamily: "'Lora', serif" }}
-            >
-              💡 Add more photos to this memory to create a richer scrapbook entry
-            </p>
-          )}
-        </div>
-
         {/* Story section */}
         <div 
-          className={`bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg shadow-rose-100/50 border border-rose-100/50 mb-10 transition-all duration-700 delay-400 ${
+          className={`bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-lg shadow-rose-100/50 border border-rose-100/50 mb-10 transition-all duration-700 delay-300 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -251,17 +192,55 @@ function MemoryPage() {
               </p>
             )}
           </div>
-          
-          {/* Divider */}
-          <div className="flex justify-center my-8">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-px bg-gradient-to-r from-transparent to-rose-200" />
-              <span className="text-rose-300">♥</span>
-              <div className="w-12 h-px bg-gradient-to-l from-transparent to-rose-200" />
-            </div>
+        </div>
+
+        {/* Photo Gallery Section */}
+        <div 
+          className={`mb-10 transition-all duration-700 delay-400 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="text-center mb-6">
+            <h2 
+              className="text-xl text-[#8B4D5C] inline-flex items-center gap-2"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              <span>📸</span>
+              <span>More Photos from this Memory</span>
+            </h2>
           </div>
           
-          {/* Our Song Section */}
+          <div className="grid gap-4 grid-cols-1 max-w-lg mx-auto">
+            {hasAdditionalImages && memory.additionalImages.length > 0 ? (
+              <div className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white">
+                <img 
+                  src={memory.additionalImages[0]} 
+                  alt={`${memory.title} - Photo 2`}
+                  className="w-full h-auto"
+                />
+              </div>
+            ) : (
+              <PhotoPlaceholder index={2} />
+            )}
+          </div>
+          
+          {/* Placeholder hint */}
+          {!hasAdditionalImages && (
+            <p 
+              className="text-center text-[#C4A5A5] text-sm mt-4 italic"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              💡 Add a photo to this memory to create a richer scrapbook entry
+            </p>
+          )}
+        </div>
+
+        {/* Our Song Section */}
+        <div 
+          className={`mb-10 transition-all duration-700 delay-500 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="relative bg-gradient-to-br from-rose-50/80 via-amber-50/50 to-rose-50/80 rounded-2xl p-6 border border-rose-200/40 overflow-hidden">
             {/* Vinyl record decoration */}
             <div className="absolute -right-8 -top-8 w-32 h-32 opacity-10">
@@ -349,7 +328,7 @@ function MemoryPage() {
 
         {/* Navigation */}
         <nav 
-          className={`flex justify-between items-center transition-all duration-700 delay-500 ${
+          className={`flex justify-between items-center transition-all duration-700 delay-[600ms] ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
