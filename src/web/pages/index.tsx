@@ -11,7 +11,7 @@ interface TimelineMilestone {
 
 const timelineMilestones: TimelineMilestone[] = [
   {
-    date: "Early November 2025",
+    date: "Mid-October 2025",
     title: "First Match",
     description: "A random Roblox lobby brought Alpha and PRi together. We were just two players in a game, but something about that match felt different. That one game changed everything.",
     icon: "🎮",
