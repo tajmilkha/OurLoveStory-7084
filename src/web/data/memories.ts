@@ -59,9 +59,18 @@ export const memories: Memory[] = [
     slug: "our-future",
     title: "Our Future",
     caption: "Building our forever ✨", 
-    date: "January 2026 — August 2026",
+    date: "January 2026",
     src: "./roblox6.jpeg",
-    story: "This is where we are now. Counting down to August 2026, when we'll finally meet in person. Every day brings us closer. Every call, every message, every moment reminds us why we chose each other. This is our future—and we're writing it together."
+    story: "January 2026. The month we got engaged and started planning our forever. From pixels to promises, from late-night Roblox sessions to dreaming about our real future together. She said yes. We're building something beautiful, something that started with a game but became so much more."
+  },
+  { 
+    id: 7, 
+    slug: "mid-winter-love",
+    title: "Mid-Winter Love",
+    caption: "Growing closer every day 💕", 
+    date: "February 2026",
+    src: "./roblox5.jpeg",
+    story: "February 2026 — the middle of our first winter as an engaged couple. Every day we grow closer. The countdown to August continues, but we're not just waiting—we're living. Late-night calls, inside jokes, planning our future, falling deeper in love. This is our daily life now, and it's beautiful."
   },
 ];
 

@@ -72,8 +72,8 @@ const GalleryCard = ({ memory, index, isVisible }: { memory: Memory; index: numb
       {/* Date badge - always visible */}
       <div className="absolute top-3 left-3 z-10">
         <span 
-          className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-[#8B4D5C] text-xs rounded-full shadow-md"
-          style={{ fontFamily: "'Lora', serif" }}
+          className="inline-block px-4 py-2 bg-[#8B4D5C] backdrop-blur-sm text-white text-sm font-bold rounded-full shadow-lg border-2 border-white/30"
+          style={{ fontFamily: "'Lora', serif", letterSpacing: '0.02em' }}
         >
           {memory.date}
         </span>
