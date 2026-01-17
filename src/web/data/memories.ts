@@ -269,7 +269,7 @@ export const memories: Memory[] = [
     caption: "Building our forever ✨", 
     date: "January 2026",
     src: "/@website-editor/images/597c25a15d9e.jpeg",
-    additionalImages: ["/@website-editor/images/a10719ccdb43.jpeg", "", "", ""],
+    additionalImages: ["/@website-editor/images/a10719ccdb43.jpeg", "/@website-editor/images/249222b29c99.jpeg", "", ""],
     story: "January 2026. We're engaged now. Actually engaged. Every time I think about it, my heart still races.",
     storyParagraphs: [
       "January 2026. We're engaged now. Actually engaged. Every time I think about it, my heart still races. This girl who started as a stranger in a game, who caught my eye with an 8-bit crown, who stayed with me through wars and betrayals and 3 AM confessions. She's going to be my wife.",
