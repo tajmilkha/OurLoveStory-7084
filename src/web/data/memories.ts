@@ -8,6 +8,8 @@ export interface Memory {
   additionalImages: string[];
   story: string;
   storyParagraphs: string[];
+  songTitle?: string;
+  songArtist?: string;
 }
 
 export const memories: Memory[] = [

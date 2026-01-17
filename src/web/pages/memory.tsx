@@ -248,38 +248,88 @@ function MemoryPage() {
             </div>
           </div>
           
-          {/* Add Your Story Section */}
-          <div className="bg-gradient-to-br from-rose-50/50 to-amber-50/50 rounded-2xl p-6 border border-dashed border-rose-200/60">
-            <div className="text-center mb-4">
-              <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center mx-auto mb-3">
-                <span className="text-lg">✍️</span>
+          {/* Our Song Section */}
+          <div className="relative bg-gradient-to-br from-rose-50/80 via-amber-50/50 to-rose-50/80 rounded-2xl p-6 border border-rose-200/40 overflow-hidden">
+            {/* Vinyl record decoration */}
+            <div className="absolute -right-8 -top-8 w-32 h-32 opacity-10">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#333] relative">
+                <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#1a1a1a] to-[#222] border border-white/10" />
+                <div className="absolute inset-[40%] rounded-full bg-rose-400" />
               </div>
+            </div>
+            
+            {/* Musical notes decoration */}
+            <div className="absolute left-4 top-4 text-rose-200/40 text-xl">♪</div>
+            <div className="absolute right-12 bottom-4 text-rose-200/40 text-lg">♫</div>
+            
+            <div className="relative text-center">
+              {/* Music icon container */}
+              <div className="relative w-16 h-16 mx-auto mb-4">
+                {/* Vinyl record visual */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] shadow-lg">
+                  <div className="absolute inset-2 rounded-full border border-white/5" />
+                  <div className="absolute inset-3 rounded-full border border-white/5" />
+                  <div className="absolute inset-4 rounded-full border border-white/5" />
+                  <div className="absolute inset-[35%] rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center">
+                    <span className="text-white text-xs">♥</span>
+                  </div>
+                </div>
+                {/* Spinning effect glow */}
+                <div className="absolute -inset-1 rounded-full bg-rose-400/20 blur-md -z-10" />
+              </div>
+              
               <h3 
-                className="text-lg text-[#8B4D5C] font-medium"
+                className="text-lg text-[#8B4D5C] font-medium mb-2"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                Add to Your Story
+                Our Song
               </h3>
-            </div>
-            <p 
-              className="text-[#C4A5A5] text-center text-sm mb-4"
-              style={{ fontFamily: "'Lora', serif" }}
-            >
-              This is your space to write more about this memory. What made this moment special? What were you feeling? What do you remember most? Share your personal thoughts here...
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
-                <span>💭</span> What you were thinking
-              </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
-                <span>💫</span> Inside jokes
-              </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
-                <span>🎵</span> Songs you associate
-              </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/70 rounded-full text-xs text-[#9C7B7B]" style={{ fontFamily: "'Lora', serif" }}>
-                <span>🌟</span> Why this matters
-              </span>
+              
+              {memory.songTitle ? (
+                /* Display song if one is set */
+                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-rose-100/50">
+                  <div className="flex items-center justify-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center shadow-md">
+                      <span className="text-white text-lg">🎵</span>
+                    </div>
+                    <div className="text-left">
+                      <p 
+                        className="text-[#8B4D5C] font-medium"
+                        style={{ fontFamily: "'Lora', serif" }}
+                      >
+                        {memory.songTitle}
+                      </p>
+                      {memory.songArtist && (
+                        <p 
+                          className="text-[#B89999] text-sm"
+                          style={{ fontFamily: "'Lora', serif" }}
+                        >
+                          {memory.songArtist}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Placeholder when no song is set */
+                <div className="space-y-3">
+                  <p 
+                    className="text-[#C4A5A5] text-sm"
+                    style={{ fontFamily: "'Lora', serif" }}
+                  >
+                    Add a song for this memory
+                  </p>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full border border-dashed border-rose-200/60">
+                    <span className="text-rose-400">🎵</span>
+                    <span 
+                      className="text-[#B89999] text-sm italic"
+                      style={{ fontFamily: "'Lora', serif" }}
+                    >
+                      What song reminds you of this moment?
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
