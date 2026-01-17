@@ -92,6 +92,12 @@ function MemoryPage() {
               <span className="text-2xl">💕</span>
             </div>
           </div>
+          <span 
+            className="inline-block px-4 py-1.5 bg-rose-100/50 text-rose-500 rounded-full text-sm mb-3"
+            style={{ fontFamily: "'Lora', serif" }}
+          >
+            {memory.date}
+          </span>
           <h1 
             className="text-4xl md:text-5xl text-[#8B4D5C] mb-2"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -136,7 +142,7 @@ function MemoryPage() {
             className="text-2xl text-[#8B4D5C] mb-6 text-center"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Our Memory -How We Met and Started Our Adventure
+            ♥ Our Story ♥
           </h2>
           <p 
             className="text-[#9C7B7B] leading-relaxed text-lg text-center italic"

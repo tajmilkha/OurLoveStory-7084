@@ -3,6 +3,7 @@ export interface Memory {
   slug: string;
   title: string;
   caption: string;
+  date: string;
   src: string;
   story: string;
 }
@@ -10,51 +11,57 @@ export interface Memory {
 export const memories: Memory[] = [
   { 
     id: 1, 
-    slug: "our-first-adventure",
-    title: "Our First Adventure",
-    caption: "Our first adventure together 💕", 
+    slug: "first-match",
+    title: "First Match",
+    caption: "When I first noticed her 👑", 
+    date: "October 2025",
     src: "/@website-editor/images/95aaa8fbb336.jpeg",
-    story: "This screenshot shows the moment everything began. We met in the game, joked a little, and fought together. I didn't know it then, but that was the start of something real our adventure together."
+    story: "October 2025 — the month everything changed. I saw her in the game with that little 8-bit crown, elegant outfit, calm presence. While everyone else was chaotic and loud, she moved with grace. For four weeks I just watched, noticed her, before I finally found the courage to say something about that crown."
   },
   { 
     id: 2, 
-    slug: "making-memories",
-    title: "Making Memories",
-    caption: "Making memories in our world 🌟", 
+    slug: "getting-to-know-you",
+    title: "Getting to Know You",
+    caption: "Those weeks of falling 🌙", 
+    date: "November 2025",
     src: "./roblox2.jpeg",
-    story: "Write your story here... Every moment spent together becomes a precious memory. What was happening in this screenshot?"
+    story: "Four weeks of hanging out, late-night gaming sessions, conversations that got longer, jokes that became inside references. She didn't know about my reputation, my history with the fighters. She liked me for me. This was when we went from strangers to something more."
   },
   { 
     id: 3, 
-    slug: "side-by-side",
-    title: "Side by Side",
-    caption: "Side by side, always 💫", 
+    slug: "we-became-official",
+    title: "We Became Official",
+    caption: "November 23, midnight 💝", 
+    date: "November 23, 2025",
     src: "./roblox3.jpeg",
-    story: "Write your story here... Together through every challenge, every adventure. What does this moment mean to you?"
+    story: "November 23, 2025 at midnight. We both said we'd never e-date. We both said we weren't looking for anything. And then we did it anyway. That nervous confession, both of us scared but wanting it anyway. Our love story officially began."
   },
   { 
     id: 4, 
-    slug: "late-night-exploring",
-    title: "Late Night Exploring",
-    caption: "Late night exploring 🌙", 
+    slug: "2v16-war",
+    title: "The 2v16 War",
+    caption: "Us against the world ⚔️", 
+    date: "December 2025",
     src: "./roblox4.jpeg",
-    story: "Write your story here... Those late night gaming sessions when the rest of the world was asleep. What made these moments so special?"
+    story: "December 2025. When the BR Team touched PRiViLEDGE, I snapped. For hours, we fought side by side—two against sixteen. She never left my side. We became the strongest couple in the game that day. This was the moment I knew she'd always have my back."
   },
   { 
     id: 5, 
-    slug: "our-happy-place",
-    title: "Our Happy Place",
-    caption: "Our happy place ✨", 
+    slug: "engaged",
+    title: "Engaged",
+    caption: "She said yes 💍", 
+    date: "January 9, 2026",
     src: "./roblox5.jpeg",
-    story: "Write your story here... Every couple has their special spot. What makes this place meaningful to both of you?"
+    story: "January 9, 2026. I asked her to spend forever with me. From pixels to promises, from late-night Roblox sessions to planning a real future together. She said yes. We're building something real, something beautiful, something that started with a game but became so much more."
   },
   { 
     id: 6, 
-    slug: "every-moment",
-    title: "Every Moment",
-    caption: "Every moment with you is magic 💝", 
+    slug: "our-future",
+    title: "Our Future",
+    caption: "Building our forever ✨", 
+    date: "January 2026 — August 2026",
     src: "./roblox6.jpeg",
-    story: "Write your story here... The little moments, the big moments—they all matter. What would you want to remember forever about this?"
+    story: "This is where we are now. Counting down to August 2026, when we'll finally meet in person. Every day brings us closer. Every call, every message, every moment reminds us why we chose each other. This is our future—and we're writing it together."
   },
 ];
 

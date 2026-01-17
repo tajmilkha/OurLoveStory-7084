@@ -69,13 +69,29 @@ const GalleryCard = ({ memory, index, isVisible }: { memory: Memory; index: numb
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
       
+      {/* Date badge - always visible */}
+      <div className="absolute top-3 left-3 z-10">
+        <span 
+          className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-[#8B4D5C] text-xs rounded-full shadow-md"
+          style={{ fontFamily: "'Lora', serif" }}
+        >
+          {memory.date}
+        </span>
+      </div>
+      
       {/* Hover overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/80 via-[#8B4D5C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
       
       {/* Caption and CTA */}
       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
         <p 
-          className="text-white text-sm font-medium text-center drop-shadow-lg mb-2"
+          className="text-white font-semibold text-center drop-shadow-lg mb-1"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          {memory.title}
+        </p>
+        <p 
+          className="text-white/90 text-sm text-center drop-shadow-lg mb-2"
           style={{ fontFamily: "'Lora', serif" }}
         >
           {memory.caption}
@@ -453,13 +469,13 @@ function Index() {
             className="text-4xl md:text-5xl text-[#8B4D5C] mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Pixelated Memories
+            Our Journey Together
           </h2>
           <p 
             className="text-[#9C7B7B] text-lg"
             style={{ fontFamily: "'Lora', serif" }}
           >
-            Screenshots from our gaming adventures together
+            From the moment we met to building our forever — click to explore each chapter
           </p>
           <HeartDivider />
         </div>
