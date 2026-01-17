@@ -71,7 +71,7 @@ export const memories: Memory[] = [
     caption: "Those weeks of falling 🌙", 
     date: "November 2025",
     src: "/@website-editor/images/5b4759580abb.jpeg",
-    additionalImages: ["/@website-editor/images/e47094798b95.jpeg", "./54028bf7830c.jpeg"],
+    additionalImages: ["/@website-editor/images/e47094798b95.jpeg", "/@website-editor/images/54028bf7830c.jpeg"],
     story: "After that first conversation about her crown, we added each other. But then I noticed something that scared me. She was connected to my enemies. People who had betrayed me. I panicked. I removed her without explanation.",
     storyParagraphs: [
       "After that first conversation about her crown, we added each other. I remember my heart racing just sending that friend request. But then I noticed something that scared me. She was connected to my enemies. People who had betrayed me. People I'd been fighting for months. My mind went to the worst place. Was she a spy? Was this a trap? I couldn't handle another betrayal.",
