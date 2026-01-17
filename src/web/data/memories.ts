@@ -73,7 +73,7 @@ export const memories: Memory[] = [
     title: "Engaged",
     caption: "She said yes 💍", 
     date: "January 9, 2026",
-    src: "./roblox5.jpeg",
+    src: "./engaged-moment.jpeg",
     additionalImages: [],
     story: "January 9, 2026. I asked her to spend forever with me. From pixels to promises, from late-night Roblox sessions to planning a real future together. She said yes. We're building something real, something beautiful, something that started with a game but became so much more.",
     storyParagraphs: [
@@ -87,7 +87,7 @@ export const memories: Memory[] = [
     title: "Our Future",
     caption: "Building our forever ✨", 
     date: "January 2026",
-    src: "./roblox6.jpeg",
+    src: "./our-future.jpeg",
     additionalImages: [],
     story: "January 2026. The month we got engaged and started planning our forever. From pixels to promises, from late-night Roblox sessions to dreaming about our real future together. She said yes. We're building something beautiful, something that started with a game but became so much more.",
     storyParagraphs: [
@@ -101,7 +101,7 @@ export const memories: Memory[] = [
     title: "Mid-Winter Love",
     caption: "Growing closer every day 💕", 
     date: "February 2026",
-    src: "./roblox5.jpeg",
+    src: "./mid-winter-love.jpeg",
     additionalImages: [],
     story: "February 2026 — the middle of our first winter as an engaged couple. Every day we grow closer. The countdown to August continues, but we're not just waiting—we're living. Late-night calls, inside jokes, planning our future, falling deeper in love. This is our daily life now, and it's beautiful.",
     storyParagraphs: [
