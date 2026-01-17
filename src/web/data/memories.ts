@@ -120,7 +120,7 @@ export const memories: Memory[] = [
     caption: "November 23, midnight 💝", 
     date: "November 23, 2025",
     src: "/@website-editor/images/95aaa8fbb336.jpeg",
-    additionalImages: ["/@website-editor/images/cea2be7cc6a8.jpeg", "/@website-editor/images/d597c2822768.jpeg", "/@website-editor/images/d597c2822768.jpeg", "./official-photo4.jpeg"],
+    additionalImages: ["/@website-editor/images/cea2be7cc6a8.jpeg", "/@website-editor/images/d597c2822768.jpeg", "/@website-editor/images/388aa99f6142.jpeg", "./official-photo4.jpeg"],
     story: "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. And then there was this one guy, her friend, who protected her when I couldn't. The jealousy I felt was unlike anything I'd experienced.",
     storyParagraphs: [
       "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. Enemies spreading rumors. And then there was this one guy, her friend, who protected her when I couldn't. He stepped in for her, and something in me snapped. Not anger. Fear. Pure, raw fear of losing her. I pushed her away. Told myself it was better this way.",
