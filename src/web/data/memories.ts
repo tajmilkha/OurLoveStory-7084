@@ -17,7 +17,7 @@ export const memories: Memory[] = [
     title: "First Match",
     caption: "When I first noticed her 👑", 
     date: "October 2025",
-    src: "/@website-editor/images/95aaa8fbb336.jpeg",
+    src: "./october-2025-memory.jpeg",
     additionalImages: [],
     story: "October 2025 — the month everything changed. I saw her in the game with that little 8-bit crown, elegant outfit, calm presence. While everyone else was chaotic and loud, she moved with grace. For four weeks I just watched, noticed her, before I finally found the courage to say something about that crown.",
     storyParagraphs: [
