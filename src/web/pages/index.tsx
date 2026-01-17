@@ -327,6 +327,15 @@ function Index() {
                   <span>Chapter Two</span>
                 </a>
               </Link>
+              <Link href="/chapter-three">
+                <a
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white/70 backdrop-blur-sm border border-rose-200 text-[#8B4D5C] rounded-full shadow-sm hover:shadow-md hover:bg-white/90 hover:border-rose-300 transition-all duration-300 text-sm"
+                  style={{ fontFamily: "'Lora', serif" }}
+                >
+                  <span className="text-rose-400">💕</span>
+                  <span>Chapter Three</span>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
