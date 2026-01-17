@@ -265,14 +265,14 @@ export default function ChapterThree() {
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5 italic border-l-2 border-rose-400/50 pl-4"
                 style={{ fontFamily: "'Lora', serif" }}
               >
-                She was so afraid of losing me that she was about to delete the entire game.
+                She was so afraid of losing me that she was about to delete that person from friends.
               </p>
               <p 
                 className="text-[#9C7B7B] leading-relaxed text-lg mb-5"
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 Not just me. Not just our friendship. <span className="font-medium text-[#8B4D5C]">The whole game.</span> Everything. 
-                She was willing to leave it all behind—the friends, the memories, the world we'd built—just 
+                She was willing to leave it all behind the friends, the memories, the world we'd built just 
                 to choose me. To prove she wanted <span className="italic">me</span>.
               </p>
               <p 
@@ -280,7 +280,7 @@ export default function ChapterThree() {
                 style={{ fontFamily: "'Lora', serif" }}
               >
                 That's when I understood. This wasn't just some online friendship. This wasn't just 
-                flirting or games or passing time. She was ready to walk away from everything—for me. 
+                flirting or games or passing time. She was ready to walk away from everything for me. 
                 She was choosing me before I even asked her to.
               </p>
               <p 
