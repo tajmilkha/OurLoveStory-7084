@@ -556,15 +556,24 @@ function MemoryPage() {
             </h2>
           </div>
           
-          <div className="grid gap-4 grid-cols-1 max-w-lg mx-auto">
+          <div className={`grid gap-4 max-w-2xl mx-auto ${
+            hasAdditionalImages && memory.additionalImages.length > 1 
+              ? 'grid-cols-1 sm:grid-cols-2' 
+              : 'grid-cols-1 max-w-lg'
+          }`}>
             {hasAdditionalImages && memory.additionalImages.length > 0 ? (
-              <div className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white">
-                <img 
-                  src={memory.additionalImages[0]} 
-                  alt={`${memory.title} - Photo 2`}
-                  className="w-full h-auto"
-                />
-              </div>
+              memory.additionalImages.map((imgSrc, index) => (
+                <div 
+                  key={index}
+                  className="relative rounded-2xl overflow-hidden shadow-lg shadow-rose-100/30 border-2 border-white hover:scale-[1.02] transition-transform duration-300"
+                >
+                  <img 
+                    src={imgSrc} 
+                    alt={`${memory.title} - Photo ${index + 2}`}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))
             ) : (
               <PhotoPlaceholder index={2} />
             )}
