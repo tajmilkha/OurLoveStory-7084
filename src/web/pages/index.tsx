@@ -534,9 +534,46 @@ function Index() {
 
           {/* Outfit Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {[...Array(6)].map((_, index) => (
+            {/* Outfit 1 - Purple/black coordinated outfits */}
+            <div className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-rose-200/50 transition-all duration-300">
+              <img 
+                src="./outfit-1.jpeg" 
+                alt="Purple and black coordinated outfits with chains and wings"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p className="text-white text-sm font-medium text-center drop-shadow-lg" style={{ fontFamily: "'Lora', serif" }}>
+                  Purple & Black Vibes 💜🖤
+                </p>
+              </div>
+              <div className="absolute top-2 right-2">
+                <span className="text-white/80 text-sm drop-shadow-lg">♥</span>
+              </div>
+            </div>
+
+            {/* Outfit 2 - Purple/white matching outfits */}
+            <div className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-rose-200/50 transition-all duration-300">
+              <img 
+                src="./outfit-2.jpeg" 
+                alt="Purple and white matching outfits"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#8B4D5C]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <p className="text-white text-sm font-medium text-center drop-shadow-lg" style={{ fontFamily: "'Lora', serif" }}>
+                  Purple & White Dreams 💜🤍
+                </p>
+              </div>
+              <div className="absolute top-2 right-2">
+                <span className="text-white/80 text-sm drop-shadow-lg">♥</span>
+              </div>
+            </div>
+
+            {/* Remaining 4 placeholder slots */}
+            {[...Array(4)].map((_, index) => (
               <div
-                key={index}
+                key={index + 2}
                 className="group relative aspect-square rounded-2xl bg-gradient-to-br from-white/80 to-rose-50/50 backdrop-blur-sm border-2 border-dashed border-rose-200/60 hover:border-rose-300 transition-all duration-300 overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-rose-100/50"
               >
                 {/* Decorative background pattern */}
@@ -574,7 +611,7 @@ function Index() {
                       className="text-[#C4A5A5] text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       style={{ fontFamily: "'Lora', serif" }}
                     >
-                      Outfit #{index + 1}
+                      Outfit #{index + 3}
                     </p>
                   </div>
                 </div>
@@ -596,7 +633,7 @@ function Index() {
               className="text-[#C4A5A5] italic text-sm"
               style={{ fontFamily: "'Lora', serif" }}
             >
-              Coming soon: Our coordinated couple fits! 👫✨
+              More matching fits coming soon! 👫✨
             </p>
           </div>
         </div>
