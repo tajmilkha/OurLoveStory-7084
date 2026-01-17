@@ -21,8 +21,8 @@ export const memories: Memory[] = [
     title: "First Match",
     caption: "When I first noticed her 👑", 
     date: "October 2025",
-    src: "/@website-editor/images/eaad8c001337.jpeg",
-    additionalImages: ["/@website-editor/images/53e55b5f5d4d.jpeg"],
+    src: "/eaad8c001337.jpeg",
+    additionalImages: ["/53e55b5f5d4d.jpeg"],
     story: "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",
     storyParagraphs: [
       "Before I found her, I was empty. Just going through motions, filling time with games that didn't matter. Then I found 2 Player Hugs RP, and for a while, fighting gave me purpose. I became the strongest. I had a reputation. But purpose isn't the same as peace. Purpose doesn't keep you warm at 3 AM when the servers go quiet.",
@@ -70,8 +70,8 @@ export const memories: Memory[] = [
     title: "Getting to Know You",
     caption: "Those weeks of falling 🌙", 
     date: "November 2025",
-    src: "/@website-editor/images/5b4759580abb.jpeg",
-    additionalImages: ["/@website-editor/images/e47094798b95.jpeg", "/@website-editor/images/54028bf7830c.jpeg"],
+    src: "/5b4759580abb.jpeg",
+    additionalImages: ["/e47094798b95.jpeg", "/54028bf7830c.jpeg"],
     story: "After that first conversation about her crown, we added each other. But then I noticed something that scared me. She was connected to my enemies. People who had betrayed me. I panicked. I removed her without explanation.",
     storyParagraphs: [
       "After that first conversation about her crown, we added each other. I remember my heart racing just sending that friend request. But then I noticed something that scared me. She was connected to my enemies. People who had betrayed me. People I'd been fighting for months. My mind went to the worst place. Was she a spy? Was this a trap? I couldn't handle another betrayal.",
@@ -119,8 +119,8 @@ export const memories: Memory[] = [
     title: "We Became Official",
     caption: "November 23, midnight 💝", 
     date: "November 23, 2025",
-    src: "/@website-editor/images/95aaa8fbb336.jpeg",
-    additionalImages: ["/@website-editor/images/cea2be7cc6a8.jpeg", "/@website-editor/images/d597c2822768.jpeg", "/@website-editor/images/388aa99f6142.jpeg", "/@website-editor/images/ae45d6f581ea.jpeg"],
+    src: "/95aaa8fbb336.jpeg",
+    additionalImages: ["/cea2be7cc6a8.jpeg", "/d597c2822768.jpeg", "/388aa99f6142.jpeg", "/ae45d6f581ea.jpeg"],
     story: "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. And then there was this one guy, her friend, who protected her when I couldn't. The jealousy I felt was unlike anything I'd experienced.",
     storyParagraphs: [
       "There was a moment that almost broke us. Her friends were jealous. People were trying to pull us apart. Enemies spreading rumors. And then there was this one guy, her friend, who protected her when I couldn't. He stepped in for her, and something in me snapped. Not anger. Fear. Pure, raw fear of losing her. I pushed her away. Told myself it was better this way.",
@@ -168,8 +168,8 @@ export const memories: Memory[] = [
     title: "The 2v16 War",
     caption: "Us against the world ⚔️", 
     date: "December 2025",
-    src: "/@website-editor/images/6ae11c3f0a56.jpeg",
-    additionalImages: ["/@website-editor/images/f59d8d2284aa.jpeg"],
+    src: "/6ae11c3f0a56.jpeg",
+    additionalImages: ["/f59d8d2284aa.jpeg"],
     story: "December 2025. The month everything changed. The BR Team had been hunting us. People on both sides were trying to tear us apart. And then someone grabbed her.",
     storyParagraphs: [
       "December 2025. The month everything changed. The BR Team had been hunting us. People on both sides were trying to tear us apart. Enemies who wanted revenge on me saw her as the perfect target. They thought she was my weakness. They were wrong. She was my strength.",
@@ -217,7 +217,7 @@ export const memories: Memory[] = [
     title: "Engaged",
     caption: "She said yes 💍", 
     date: "January 9, 2026",
-    src: "/@website-editor/images/a8977ff64d92.jpeg",
+    src: "/a8977ff64d92.jpeg",
     additionalImages: [],
     story: "January 9, 2026. The day I asked her to spend forever with me.",
     storyParagraphs: [
@@ -268,8 +268,8 @@ export const memories: Memory[] = [
     title: "Our Future",
     caption: "Building our forever ✨", 
     date: "January 2026",
-    src: "/@website-editor/images/597c25a15d9e.jpeg",
-    additionalImages: ["/@website-editor/images/a10719ccdb43.jpeg", "/@website-editor/images/249222b29c99.jpeg"],
+    src: "/597c25a15d9e.jpeg",
+    additionalImages: ["/a10719ccdb43.jpeg", "/249222b29c99.jpeg"],
     story: "January 2026. We're engaged now. Actually engaged. Every time I think about it, my heart still races.",
     storyParagraphs: [
       "January 2026. We're engaged now. Actually engaged. Every time I think about it, my heart still races. This girl who started as a stranger in a game, who caught my eye with an 8-bit crown, who stayed with me through wars and betrayals and 3 AM confessions. She's going to be my wife.",
@@ -317,7 +317,7 @@ export const memories: Memory[] = [
     title: "Mid-Winter Love",
     caption: "Growing closer every day 💕", 
     date: "February 2026",
-    src: "/@website-editor/images/2f5ff153d2cc.jpeg",
+    src: "/2f5ff153d2cc.jpeg",
     additionalImages: [],
     story: "February 2026. The middle of winter, but I've never felt warmer.",
     storyParagraphs: [
